@@ -1,0 +1,1351 @@
+NDS Database:  version P.49d
+
+NDS_INFO | xbr | 2C64A44VQ | XC2C64A-7-VQ44
+
+DEVICE | 2C64A | 2C64A44VQ | 
+
+NETWORK | FourBitALU | 0 | 0 | 1073758214 | 0
+
+MACROCELL_INSTANCE | NULL | carryOut_MC | FourBitALU_COPY_0_COPY_0 | 0 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Temp<4> | 6298 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<4>_MC.Q | Temp<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | carryOut_MC.Q | 6379 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | carryOut_MC.Q | carryOut_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | carryOut_MC.SI | carryOut_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Temp<4> | 6298 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<4>_MC.Q | Temp<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | carryOut_MC.D1 | 6296 | ? | 0 | 0 | carryOut_MC | NULL | NULL | carryOut_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | Temp<4> | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | carryOut_MC.D2 | 6297 | ? | 0 | 0 | carryOut_MC | NULL | NULL | carryOut_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | carryOut_MC.REG | carryOut_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | carryOut_MC.D | 6295 | ? | 0 | 0 | carryOut_MC | NULL | NULL | carryOut_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | carryOut_MC.Q | 6378 | ? | 0 | 0 | carryOut_MC | NULL | NULL | carryOut_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+Inv+PrldLow | Temp<4>_MC | FourBitALU_COPY_0_COPY_0 | 1344 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<3>_II/UIM | 6304 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_26 | 6305 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_26_MC.Q | N_PZ_26_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0000__or0002 | 6312 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0000__or0002_MC.Q | Madd_Temp_addsub0000__or0002_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0001__or0001 | 6357 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0001__or0001_MC.Q | Madd_Temp_addsub0001__or0001_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<3>_II/UIM | 6311 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 6377 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Temp<4> | 6298 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<4>_MC.Q | Temp<4>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Temp<4>_MC.SI | Temp<4>_MC | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<3>_II/UIM | 6304 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_26 | 6305 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_26_MC.Q | N_PZ_26_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0000__or0002 | 6312 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0000__or0002_MC.Q | Madd_Temp_addsub0000__or0002_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0001__or0001 | 6357 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0001__or0001_MC.Q | Madd_Temp_addsub0001__or0001_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<3>_II/UIM | 6311 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<3>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Temp<4>_MC.D1 | 6302 | ? | 0 | 0 | Temp<4>_MC | NULL | NULL | Temp<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Temp<4>_MC.D2 | 6301 | ? | 0 | 0 | Temp<4>_MC | NULL | NULL | Temp<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_FALSE | N_PZ_28
+SPPTERM | 3 | IV_FALSE | registerA<3>_II/UIM | IV_TRUE | N_PZ_26 | IV_TRUE | N_PZ_16
+SPPTERM | 3 | IV_FALSE | registerA<3>_II/UIM | IV_FALSE | Madd_Temp_addsub0000__or0002 | IV_FALSE | Madd_Temp_addsub0001__or0001
+SPPTERM | 3 | IV_TRUE | N_PZ_26 | IV_TRUE | registerB<3>_II/UIM | IV_FALSE | Madd_Temp_addsub0000__or0002
+SPPTERM | 3 | IV_FALSE | registerB<3>_II/UIM | IV_FALSE | Madd_Temp_addsub0000__or0002 | IV_TRUE | N_PZ_16
+SPPTERM | 4 | IV_FALSE | N_PZ_26 | IV_TRUE | registerB<3>_II/UIM | IV_FALSE | N_PZ_16 | IV_FALSE | Madd_Temp_addsub0001__or0001
+SPPTERM | 5 | IV_FALSE | N_PZ_26 | IV_FALSE | registerB<3>_II/UIM | IV_TRUE | Madd_Temp_addsub0000__or0002 | IV_FALSE | N_PZ_16 | IV_TRUE | Madd_Temp_addsub0001__or0001
+
+SRFF_INSTANCE | Temp<4>_MC.REG | Temp<4>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Temp<4>_MC.D | 6300 | ? | 0 | 0 | Temp<4>_MC | NULL | NULL | Temp<4>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 6377 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Temp<4>_MC.Q | 6299 | ? | 0 | 0 | Temp<4>_MC | NULL | NULL | Temp<4>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | registerA<3>_II | FourBitALU_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | registerA<3> | 6303 | PI | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | registerA<3>_II/UIM | 6304 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<3>_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | N_PZ_26_MC | FourBitALU_COPY_0_COPY_0 | 0 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<3>_II/UIM | 6311 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<3>_II/UIM | 6304 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0000__or0002 | 6312 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0000__or0002_MC.Q | Madd_Temp_addsub0000__or0002_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | N_PZ_26 | 6305 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_26_MC.Q | N_PZ_26_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | N_PZ_26_MC.SI | N_PZ_26_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<3>_II/UIM | 6311 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<3>_II/UIM | 6304 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0000__or0002 | 6312 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0000__or0002_MC.Q | Madd_Temp_addsub0000__or0002_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | N_PZ_26_MC.D1 | 6308 | ? | 0 | 0 | N_PZ_26_MC | NULL | NULL | N_PZ_26_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | registerB<3>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | N_PZ_26_MC.D2 | 6309 | ? | 0 | 0 | N_PZ_26_MC | NULL | NULL | N_PZ_26_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | Madd_Temp_addsub0000__or0002
+SPPTERM | 2 | IV_FALSE | registerA<3>_II/UIM | IV_TRUE | Madd_Temp_addsub0000__or0002
+
+SRFF_INSTANCE | N_PZ_26_MC.REG | N_PZ_26_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | N_PZ_26_MC.D | 6307 | ? | 0 | 0 | N_PZ_26_MC | NULL | NULL | N_PZ_26_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | N_PZ_26_MC.Q | 6306 | ? | 0 | 0 | N_PZ_26_MC | NULL | NULL | N_PZ_26_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | registerB<3>_II | FourBitALU_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | registerB<3> | 6310 | PI | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | registerB<3>_II/UIM | 6311 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<3>_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | Madd_Temp_addsub0000__or0002_MC | FourBitALU_COPY_0_COPY_0 | 0 | 7 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<2>_II/UIM | 6318 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<2>_II/UIM | 6320 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0000__or0001 | 6332 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0000__or0001_MC.Q | Madd_Temp_addsub0000__or0001_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_71 | 6362 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_71_MC.Q | N_PZ_71_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_68 | 6367 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_68_MC.Q | N_PZ_68_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0001__or0001 | 6357 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0001__or0001_MC.Q | Madd_Temp_addsub0001__or0001_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Madd_Temp_addsub0000__or0002 | 6312 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0000__or0002_MC.Q | Madd_Temp_addsub0000__or0002_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Madd_Temp_addsub0000__or0002_MC.SI | Madd_Temp_addsub0000__or0002_MC | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<2>_II/UIM | 6318 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<2>_II/UIM | 6320 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0000__or0001 | 6332 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0000__or0001_MC.Q | Madd_Temp_addsub0000__or0001_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_71 | 6362 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_71_MC.Q | N_PZ_71_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_68 | 6367 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_68_MC.Q | N_PZ_68_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0001__or0001 | 6357 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0001__or0001_MC.Q | Madd_Temp_addsub0001__or0001_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Madd_Temp_addsub0000__or0002_MC.D1 | 6316 | ? | 0 | 0 | Madd_Temp_addsub0000__or0002_MC | NULL | NULL | Madd_Temp_addsub0000__or0002_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Madd_Temp_addsub0000__or0002_MC.D2 | 6315 | ? | 0 | 0 | Madd_Temp_addsub0000__or0002_MC | NULL | NULL | Madd_Temp_addsub0000__or0002_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | registerB<2>_II/UIM | IV_TRUE | registerA<2>_II/UIM | IV_TRUE | N_PZ_16
+SPPTERM | 3 | IV_TRUE | Madd_Temp_addsub0000__or0001 | IV_FALSE | N_PZ_71 | IV_TRUE | N_PZ_68
+SPPTERM | 4 | IV_FALSE | N_PZ_16 | IV_TRUE | Madd_Temp_addsub0000__or0001 | IV_FALSE | Madd_Temp_addsub0001__or0001 | IV_TRUE | N_PZ_71
+
+SRFF_INSTANCE | Madd_Temp_addsub0000__or0002_MC.REG | Madd_Temp_addsub0000__or0002_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Madd_Temp_addsub0000__or0002_MC.D | 6314 | ? | 0 | 0 | Madd_Temp_addsub0000__or0002_MC | NULL | NULL | Madd_Temp_addsub0000__or0002_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Madd_Temp_addsub0000__or0002_MC.Q | 6313 | ? | 0 | 0 | Madd_Temp_addsub0000__or0002_MC | NULL | NULL | Madd_Temp_addsub0000__or0002_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | registerB<2>_II | FourBitALU_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | registerB<2> | 6317 | PI | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | registerB<2>_II/UIM | 6318 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<2>_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | registerA<2>_II | FourBitALU_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | registerA<2> | 6319 | PI | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | registerA<2>_II/UIM | 6320 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<2>_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | N_PZ_16_MC | FourBitALU_COPY_0_COPY_0 | 0 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<3>_II/UIM | 6327 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | N_PZ_16_MC.SI | N_PZ_16_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<3>_II/UIM | 6327 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | N_PZ_16_MC.D1 | 6324 | ? | 0 | 0 | N_PZ_16_MC | NULL | NULL | N_PZ_16_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 3 | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | N_PZ_16_MC.D2 | 6325 | ? | 0 | 0 | N_PZ_16_MC | NULL | NULL | N_PZ_16_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | N_PZ_16_MC.REG | N_PZ_16_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | N_PZ_16_MC.D | 6323 | ? | 0 | 0 | N_PZ_16_MC | NULL | NULL | N_PZ_16_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | N_PZ_16_MC.Q | 6322 | ? | 0 | 0 | N_PZ_16_MC | NULL | NULL | N_PZ_16_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | opCode<3>_II | FourBitALU_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | opCode<3> | 6326 | PI | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | opCode<3>_II/UIM | 6327 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<3>_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | opCode<2>_II | FourBitALU_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | opCode<2> | 6328 | PI | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | opCode<1>_II | FourBitALU_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | opCode<1> | 6330 | PI | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | Madd_Temp_addsub0000__or0001_MC | FourBitALU_COPY_0_COPY_0 | 0 | 6 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_17 | 6339 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_17_MC.Q | N_PZ_17_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_20 | 6348 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_20_MC.Q | N_PZ_20_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Madd_Temp_addsub0000__or0001 | 6332 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0000__or0001_MC.Q | Madd_Temp_addsub0000__or0001_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Madd_Temp_addsub0000__or0001_MC.SI | Madd_Temp_addsub0000__or0001_MC | 0 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_17 | 6339 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_17_MC.Q | N_PZ_17_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_20 | 6348 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_20_MC.Q | N_PZ_20_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Madd_Temp_addsub0000__or0001_MC.D1 | 6336 | ? | 0 | 0 | Madd_Temp_addsub0000__or0001_MC | NULL | NULL | Madd_Temp_addsub0000__or0001_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Madd_Temp_addsub0000__or0001_MC.D2 | 6335 | ? | 0 | 0 | Madd_Temp_addsub0000__or0001_MC | NULL | NULL | Madd_Temp_addsub0000__or0001_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | N_PZ_16 | IV_TRUE | registerA<1>_II/UIM | IV_FALSE | N_PZ_17
+SPPTERM | 3 | IV_FALSE | N_PZ_16 | IV_FALSE | N_PZ_17 | IV_TRUE | N_PZ_20
+SPPTERM | 4 | IV_TRUE | N_PZ_16 | IV_TRUE | N_PZ_17 | IV_TRUE | registerA<0>_II/UIM | IV_TRUE | N_PZ_20
+SPPTERM | 4 | IV_TRUE | N_PZ_16 | IV_TRUE | N_PZ_17 | IV_FALSE | N_PZ_20 | IV_TRUE | opCode<0>_II/UIM
+
+SRFF_INSTANCE | Madd_Temp_addsub0000__or0001_MC.REG | Madd_Temp_addsub0000__or0001_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Madd_Temp_addsub0000__or0001_MC.D | 6334 | ? | 0 | 0 | Madd_Temp_addsub0000__or0001_MC | NULL | NULL | Madd_Temp_addsub0000__or0001_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Madd_Temp_addsub0000__or0001_MC.Q | 6333 | ? | 0 | 0 | Madd_Temp_addsub0000__or0001_MC | NULL | NULL | Madd_Temp_addsub0000__or0001_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | registerA<1>_II | FourBitALU_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | registerA<1> | 6337 | PI | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | N_PZ_17_MC | FourBitALU_COPY_0_COPY_0 | 0 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<1>_II/UIM | 6345 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | N_PZ_17 | 6339 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_17_MC.Q | N_PZ_17_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | N_PZ_17_MC.SI | N_PZ_17_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<1>_II/UIM | 6345 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | N_PZ_17_MC.D1 | 6343 | ? | 0 | 0 | N_PZ_17_MC | NULL | NULL | N_PZ_17_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | N_PZ_17_MC.D2 | 6342 | ? | 0 | 0 | N_PZ_17_MC | NULL | NULL | N_PZ_17_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | registerA<1>_II/UIM | IV_FALSE | registerB<1>_II/UIM
+SPPTERM | 2 | IV_FALSE | registerA<1>_II/UIM | IV_TRUE | registerB<1>_II/UIM
+
+SRFF_INSTANCE | N_PZ_17_MC.REG | N_PZ_17_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | N_PZ_17_MC.D | 6341 | ? | 0 | 0 | N_PZ_17_MC | NULL | NULL | N_PZ_17_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | N_PZ_17_MC.Q | 6340 | ? | 0 | 0 | N_PZ_17_MC | NULL | NULL | N_PZ_17_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | registerB<1>_II | FourBitALU_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | registerB<1> | 6344 | PI | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | registerB<1>_II/UIM | 6345 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<1>_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | registerA<0>_II | FourBitALU_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | registerA<0> | 6346 | PI | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | N_PZ_20_MC | FourBitALU_COPY_0_COPY_0 | 0 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<0>_II/UIM | 6354 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | N_PZ_20 | 6348 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_20_MC.Q | N_PZ_20_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | N_PZ_20_MC.SI | N_PZ_20_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<0>_II/UIM | 6354 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | N_PZ_20_MC.D1 | 6352 | ? | 0 | 0 | N_PZ_20_MC | NULL | NULL | N_PZ_20_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | N_PZ_20_MC.D2 | 6351 | ? | 0 | 0 | N_PZ_20_MC | NULL | NULL | N_PZ_20_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | registerA<0>_II/UIM | IV_TRUE | registerB<0>_II/UIM
+SPPTERM | 2 | IV_FALSE | registerA<0>_II/UIM | IV_FALSE | registerB<0>_II/UIM
+
+SRFF_INSTANCE | N_PZ_20_MC.REG | N_PZ_20_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | N_PZ_20_MC.D | 6350 | ? | 0 | 0 | N_PZ_20_MC | NULL | NULL | N_PZ_20_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | N_PZ_20_MC.Q | 6349 | ? | 0 | 0 | N_PZ_20_MC | NULL | NULL | N_PZ_20_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | registerB<0>_II | FourBitALU_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | registerB<0> | 6353 | PI | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | registerB<0>_II/UIM | 6354 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<0>_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | opCode<0>_II | FourBitALU_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | opCode<0> | 6355 | PI | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | Madd_Temp_addsub0001__or0001_MC | FourBitALU_COPY_0_COPY_0 | 0 | 6 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<2>_II/UIM | 6318 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_71 | 6362 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_71_MC.Q | N_PZ_71_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_17 | 6339 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_17_MC.Q | N_PZ_17_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_20 | 6348 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_20_MC.Q | N_PZ_20_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Madd_Temp_addsub0001__or0001 | 6357 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0001__or0001_MC.Q | Madd_Temp_addsub0001__or0001_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Madd_Temp_addsub0001__or0001_MC.SI | Madd_Temp_addsub0001__or0001_MC | 0 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<2>_II/UIM | 6318 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_71 | 6362 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_71_MC.Q | N_PZ_71_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_17 | 6339 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_17_MC.Q | N_PZ_17_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_20 | 6348 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_20_MC.Q | N_PZ_20_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Madd_Temp_addsub0001__or0001_MC.D1 | 6361 | ? | 0 | 0 | Madd_Temp_addsub0001__or0001_MC | NULL | NULL | Madd_Temp_addsub0001__or0001_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Madd_Temp_addsub0001__or0001_MC.D2 | 6360 | ? | 0 | 0 | Madd_Temp_addsub0001__or0001_MC | NULL | NULL | Madd_Temp_addsub0001__or0001_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | registerB<2>_II/UIM | IV_FALSE | N_PZ_71
+SPPTERM | 3 | IV_TRUE | registerA<1>_II/UIM | IV_TRUE | N_PZ_17 | IV_TRUE | N_PZ_71
+SPPTERM | 4 | IV_FALSE | N_PZ_17 | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | N_PZ_20 | IV_TRUE | N_PZ_71
+
+SRFF_INSTANCE | Madd_Temp_addsub0001__or0001_MC.REG | Madd_Temp_addsub0001__or0001_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Madd_Temp_addsub0001__or0001_MC.D | 6359 | ? | 0 | 0 | Madd_Temp_addsub0001__or0001_MC | NULL | NULL | Madd_Temp_addsub0001__or0001_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Madd_Temp_addsub0001__or0001_MC.Q | 6358 | ? | 0 | 0 | Madd_Temp_addsub0001__or0001_MC | NULL | NULL | Madd_Temp_addsub0001__or0001_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | NULL | N_PZ_71_MC | FourBitALU_COPY_0_COPY_0 | 0 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<2>_II/UIM | 6318 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<2>_II/UIM | 6320 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<2>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | N_PZ_71 | 6362 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_71_MC.Q | N_PZ_71_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | N_PZ_71_MC.SI | N_PZ_71_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<2>_II/UIM | 6318 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<2>_II/UIM | 6320 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<2>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | N_PZ_71_MC.D1 | 6366 | ? | 0 | 0 | N_PZ_71_MC | NULL | NULL | N_PZ_71_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | N_PZ_71_MC.D2 | 6365 | ? | 0 | 0 | N_PZ_71_MC | NULL | NULL | N_PZ_71_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | registerB<2>_II/UIM | IV_TRUE | registerA<2>_II/UIM
+SPPTERM | 2 | IV_FALSE | registerB<2>_II/UIM | IV_FALSE | registerA<2>_II/UIM
+
+SRFF_INSTANCE | N_PZ_71_MC.REG | N_PZ_71_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | N_PZ_71_MC.D | 6364 | ? | 0 | 0 | N_PZ_71_MC | NULL | NULL | N_PZ_71_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | N_PZ_71_MC.Q | 6363 | ? | 0 | 0 | N_PZ_71_MC | NULL | NULL | N_PZ_71_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | NULL | N_PZ_68_MC | FourBitALU_COPY_0_COPY_0 | 0 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_17 | 6339 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_17_MC.Q | N_PZ_17_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_20 | 6348 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_20_MC.Q | N_PZ_20_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | N_PZ_68 | 6367 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_68_MC.Q | N_PZ_68_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | N_PZ_68_MC.SI | N_PZ_68_MC | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_17 | 6339 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_17_MC.Q | N_PZ_17_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_20 | 6348 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_20_MC.Q | N_PZ_20_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | N_PZ_68_MC.D1 | 6371 | ? | 0 | 0 | N_PZ_68_MC | NULL | NULL | N_PZ_68_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | N_PZ_68_MC.D2 | 6370 | ? | 0 | 0 | N_PZ_68_MC | NULL | NULL | N_PZ_68_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | N_PZ_16
+SPPTERM | 2 | IV_TRUE | registerA<1>_II/UIM | IV_TRUE | N_PZ_17
+SPPTERM | 3 | IV_FALSE | N_PZ_17 | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | N_PZ_20
+
+SRFF_INSTANCE | N_PZ_68_MC.REG | N_PZ_68_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | N_PZ_68_MC.D | 6369 | ? | 0 | 0 | N_PZ_68_MC | NULL | NULL | N_PZ_68_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | N_PZ_68_MC.Q | 6368 | ? | 0 | 0 | N_PZ_68_MC | NULL | NULL | N_PZ_68_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | NULL | N_PZ_28_MC | FourBitALU_COPY_0_COPY_0 | 0 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<3>_II/UIM | 6327 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | N_PZ_28_MC.SI | N_PZ_28_MC | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<3>_II/UIM | 6327 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | N_PZ_28_MC.D1 | 6376 | ? | 0 | 0 | N_PZ_28_MC | NULL | NULL | N_PZ_28_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | N_PZ_28_MC.D2 | 6375 | ? | 0 | 0 | N_PZ_28_MC | NULL | NULL | N_PZ_28_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | N_PZ_16
+SPPTERM | 3 | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM
+SPPTERM | 4 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+
+SRFF_INSTANCE | N_PZ_28_MC.REG | N_PZ_28_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | N_PZ_28_MC.D | 6374 | ? | 0 | 0 | N_PZ_28_MC | NULL | NULL | N_PZ_28_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | N_PZ_28_MC.Q | 6373 | ? | 0 | 0 | N_PZ_28_MC | NULL | NULL | N_PZ_28_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | carryOut | FourBitALU_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | carryOut_MC.Q | 6379 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | carryOut_MC.Q | carryOut_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | carryOut | 6380 | PO | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | carryOut | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | dataOut<0>_MC | FourBitALU_COPY_0_COPY_0 | 0 | 10 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Temp<0> | 6384 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<0>_MC.Q | Temp<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<3>_II/UIM | 6327 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_20 | 6348 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_20_MC.Q | N_PZ_20_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<0>_II/UIM | 6354 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | dataOut<0>_MC.Q | 6391 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | dataOut<0>_MC.Q | dataOut<0>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | dataOut<0>_MC.SI | dataOut<0>_MC | 0 | 10 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Temp<0> | 6384 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<0>_MC.Q | Temp<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<3>_II/UIM | 6327 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_20 | 6348 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_20_MC.Q | N_PZ_20_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<0>_II/UIM | 6354 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | dataOut<0>_MC.D1 | 6383 | ? | 0 | 0 | dataOut<0>_MC | NULL | NULL | dataOut<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | dataOut<0>_MC.D2 | 6382 | ? | 0 | 0 | dataOut<0>_MC | NULL | NULL | dataOut<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | N_PZ_28 | IV_TRUE | Temp<0>
+SPPTERM | 4 | IV_TRUE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_TRUE | registerA<1>_II/UIM
+SPPTERM | 4 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | N_PZ_20
+SPPTERM | 5 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_TRUE | opCode<0>_II/UIM
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_TRUE | opCode<0>_II/UIM
+SPPTERM | 6 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_TRUE | registerB<0>_II/UIM | IV_TRUE | opCode<0>_II/UIM
+
+SRFF_INSTANCE | dataOut<0>_MC.REG | dataOut<0>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | dataOut<0>_MC.D | 6381 | ? | 0 | 0 | dataOut<0>_MC | NULL | NULL | dataOut<0>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | dataOut<0>_MC.Q | 6390 | ? | 0 | 0 | dataOut<0>_MC | NULL | NULL | dataOut<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | Temp<0>_MC | FourBitALU_COPY_0_COPY_0 | 1088 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_20 | 6348 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_20_MC.Q | N_PZ_20_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 6389 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Temp<0> | 6384 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<0>_MC.Q | Temp<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Temp<0>_MC.SI | Temp<0>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_20 | 6348 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_20_MC.Q | N_PZ_20_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Temp<0>_MC.D1 | 6387 | ? | 0 | 0 | Temp<0>_MC | NULL | NULL | Temp<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_FALSE | N_PZ_20 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Temp<0>_MC.D2 | 6388 | ? | 0 | 0 | Temp<0>_MC | NULL | NULL | Temp<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | N_PZ_16 | IV_TRUE | opCode<0>_II/UIM | IV_TRUE | N_PZ_28
+
+SRFF_INSTANCE | Temp<0>_MC.REG | Temp<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Temp<0>_MC.D | 6386 | ? | 0 | 0 | Temp<0>_MC | NULL | NULL | Temp<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 6389 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Temp<0>_MC.Q | 6385 | ? | 0 | 0 | Temp<0>_MC | NULL | NULL | Temp<0>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | dataOut<0> | FourBitALU_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | dataOut<0>_MC.Q | 6391 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | dataOut<0>_MC.Q | dataOut<0>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | dataOut<0> | 6392 | PO | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | dataOut<0> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | dataOut<1>_MC | FourBitALU_COPY_0_COPY_0 | 256 | 12 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Temp<1> | 6396 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<1>_MC.Q | Temp<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_65 | 6401 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_65_MC.Q | N_PZ_65_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<2>_II/UIM | 6320 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<3>_II/UIM | 6327 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_17 | 6339 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_17_MC.Q | N_PZ_17_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<1>_II/UIM | 6345 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | dataOut<1>_MC.Q | 6407 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | dataOut<1>_MC.Q | dataOut<1>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | dataOut<1>_MC.SI | dataOut<1>_MC | 0 | 12 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Temp<1> | 6396 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<1>_MC.Q | Temp<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_65 | 6401 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_65_MC.Q | N_PZ_65_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<2>_II/UIM | 6320 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<3>_II/UIM | 6327 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_17 | 6339 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_17_MC.Q | N_PZ_17_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<1>_II/UIM | 6345 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | dataOut<1>_MC.D1 | 6395 | ? | 0 | 0 | dataOut<1>_MC | NULL | NULL | dataOut<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | dataOut<1>_MC.D2 | 6394 | ? | 0 | 0 | dataOut<1>_MC | NULL | NULL | dataOut<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | N_PZ_28 | IV_FALSE | Temp<1>
+SPPTERM | 3 | IV_FALSE | registerA<1>_II/UIM | IV_FALSE | N_PZ_28 | IV_TRUE | N_PZ_65
+SPPTERM | 4 | IV_FALSE | registerA<2>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | N_PZ_28
+SPPTERM | 4 | IV_TRUE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM
+SPPTERM | 4 | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_FALSE | opCode<0>_II/UIM | IV_TRUE | N_PZ_65
+SPPTERM | 5 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | N_PZ_17 | IV_TRUE | opCode<0>_II/UIM
+SPPTERM | 5 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_TRUE | N_PZ_17 | IV_FALSE | N_PZ_65
+SPPTERM | 5 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | N_PZ_17 | IV_FALSE | registerB<1>_II/UIM | IV_FALSE | N_PZ_65
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_FALSE | registerA<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | N_PZ_28
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | registerA<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | N_PZ_28 | IV_FALSE | N_PZ_65
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | registerA<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_TRUE | opCode<0>_II/UIM | IV_FALSE | N_PZ_28
+
+SRFF_INSTANCE | dataOut<1>_MC.REG | dataOut<1>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | dataOut<1>_MC.D | 6393 | ? | 0 | 0 | dataOut<1>_MC | NULL | NULL | dataOut<1>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | dataOut<1>_MC.Q | 6406 | ? | 0 | 0 | dataOut<1>_MC | NULL | NULL | dataOut<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | Temp<1>_MC | FourBitALU_COPY_0_COPY_0 | 1088 | 7 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_17 | 6339 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_17_MC.Q | N_PZ_17_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_20 | 6348 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_20_MC.Q | N_PZ_20_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 6389 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Temp<1> | 6396 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<1>_MC.Q | Temp<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Temp<1>_MC.SI | Temp<1>_MC | 0 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_17 | 6339 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_17_MC.Q | N_PZ_17_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_20 | 6348 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_20_MC.Q | N_PZ_20_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Temp<1>_MC.D1 | 6399 | ? | 0 | 0 | Temp<1>_MC | NULL | NULL | Temp<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | N_PZ_17 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Temp<1>_MC.D2 | 6400 | ? | 0 | 0 | Temp<1>_MC | NULL | NULL | Temp<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | N_PZ_16 | IV_TRUE | registerA<0>_II/UIM | IV_TRUE | N_PZ_20 | IV_TRUE | N_PZ_28
+SPPTERM | 4 | IV_TRUE | N_PZ_16 | IV_FALSE | N_PZ_20 | IV_TRUE | opCode<0>_II/UIM | IV_TRUE | N_PZ_28
+SPPTERM | 4 | IV_FALSE | N_PZ_16 | IV_FALSE | registerA<0>_II/UIM | IV_FALSE | N_PZ_20 | IV_TRUE | N_PZ_28
+
+SRFF_INSTANCE | Temp<1>_MC.REG | Temp<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Temp<1>_MC.D | 6398 | ? | 0 | 0 | Temp<1>_MC | NULL | NULL | Temp<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 6389 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Temp<1>_MC.Q | 6397 | ? | 0 | 0 | Temp<1>_MC | NULL | NULL | Temp<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | NULL | N_PZ_65_MC | FourBitALU_COPY_0_COPY_0 | 0 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | N_PZ_65 | 6401 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_65_MC.Q | N_PZ_65_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | N_PZ_65_MC.SI | N_PZ_65_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | N_PZ_65_MC.D1 | 6405 | ? | 0 | 0 | N_PZ_65_MC | NULL | NULL | N_PZ_65_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | N_PZ_65_MC.D2 | 6404 | ? | 0 | 0 | N_PZ_65_MC | NULL | NULL | N_PZ_65_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_TRUE | registerA<1>_II/UIM
+SPPTERM | 3 | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+
+SRFF_INSTANCE | N_PZ_65_MC.REG | N_PZ_65_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | N_PZ_65_MC.D | 6403 | ? | 0 | 0 | N_PZ_65_MC | NULL | NULL | N_PZ_65_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | N_PZ_65_MC.Q | 6402 | ? | 0 | 0 | N_PZ_65_MC | NULL | NULL | N_PZ_65_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | dataOut<1> | FourBitALU_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | dataOut<1>_MC.Q | 6407 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | dataOut<1>_MC.Q | dataOut<1>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | dataOut<1> | 6408 | PO | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | dataOut<1> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | dataOut<2>_MC | FourBitALU_COPY_0_COPY_0 | 256 | 13 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Temp<2> | 6412 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<2>_MC.Q | Temp<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<2>_II/UIM | 6320 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<3>_II/UIM | 6327 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_65 | 6401 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_65_MC.Q | N_PZ_65_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<3>_II/UIM | 6304 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<2>_II/UIM | 6318 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_71 | 6362 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_71_MC.Q | N_PZ_71_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | dataOut<2>_MC.Q | 6418 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | dataOut<2>_MC.Q | dataOut<2>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | dataOut<2>_MC.SI | dataOut<2>_MC | 0 | 13 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Temp<2> | 6412 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<2>_MC.Q | Temp<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<2>_II/UIM | 6320 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<3>_II/UIM | 6327 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_65 | 6401 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_65_MC.Q | N_PZ_65_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<3>_II/UIM | 6304 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<2>_II/UIM | 6318 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_71 | 6362 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_71_MC.Q | N_PZ_71_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | dataOut<2>_MC.D1 | 6411 | ? | 0 | 0 | dataOut<2>_MC | NULL | NULL | dataOut<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | dataOut<2>_MC.D2 | 6410 | ? | 0 | 0 | dataOut<2>_MC | NULL | NULL | dataOut<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | N_PZ_28 | IV_FALSE | Temp<2>
+SPPTERM | 3 | IV_FALSE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | N_PZ_65
+SPPTERM | 4 | IV_FALSE | registerA<3>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_FALSE | N_PZ_65
+SPPTERM | 4 | IV_TRUE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | N_PZ_65
+SPPTERM | 5 | IV_FALSE | registerB<2>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | N_PZ_71 | IV_FALSE | N_PZ_65
+SPPTERM | 5 | IV_FALSE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | registerA<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | N_PZ_28
+SPPTERM | 5 | IV_FALSE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_TRUE | opCode<0>_II/UIM | IV_FALSE | N_PZ_28
+SPPTERM | 5 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_TRUE | opCode<0>_II/UIM | IV_TRUE | N_PZ_71
+SPPTERM | 5 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | N_PZ_71 | IV_FALSE | N_PZ_65
+SPPTERM | 6 | IV_TRUE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | registerA<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | N_PZ_28 | IV_FALSE | N_PZ_65
+SPPTERM | 6 | IV_TRUE | registerA<2>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_FALSE | opCode<0>_II/UIM | IV_FALSE | N_PZ_65
+
+SRFF_INSTANCE | dataOut<2>_MC.REG | dataOut<2>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | dataOut<2>_MC.D | 6409 | ? | 0 | 0 | dataOut<2>_MC | NULL | NULL | dataOut<2>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | dataOut<2>_MC.Q | 6417 | ? | 0 | 0 | dataOut<2>_MC | NULL | NULL | dataOut<2>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | Temp<2>_MC | FourBitALU_COPY_0_COPY_0 | 1088 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0000__or0001 | 6332 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0000__or0001_MC.Q | Madd_Temp_addsub0000__or0001_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_71 | 6362 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_71_MC.Q | N_PZ_71_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_68 | 6367 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_68_MC.Q | N_PZ_68_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 6377 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Temp<2> | 6412 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<2>_MC.Q | Temp<2>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Temp<2>_MC.SI | Temp<2>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0000__or0001 | 6332 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0000__or0001_MC.Q | Madd_Temp_addsub0000__or0001_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_71 | 6362 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_71_MC.Q | N_PZ_71_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_68 | 6367 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_68_MC.Q | N_PZ_68_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Temp<2>_MC.D1 | 6415 | ? | 0 | 0 | Temp<2>_MC | NULL | NULL | Temp<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | Madd_Temp_addsub0000__or0001 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Temp<2>_MC.D2 | 6416 | ? | 0 | 0 | Temp<2>_MC | NULL | NULL | Temp<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | N_PZ_71 | IV_FALSE | N_PZ_68 | IV_TRUE | N_PZ_28
+SPPTERM | 3 | IV_FALSE | N_PZ_71 | IV_TRUE | N_PZ_68 | IV_TRUE | N_PZ_28
+
+SRFF_INSTANCE | Temp<2>_MC.REG | Temp<2>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Temp<2>_MC.D | 6414 | ? | 0 | 0 | Temp<2>_MC | NULL | NULL | Temp<2>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 6377 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Temp<2>_MC.Q | 6413 | ? | 0 | 0 | Temp<2>_MC | NULL | NULL | Temp<2>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | dataOut<2> | FourBitALU_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | dataOut<2>_MC.Q | 6418 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | dataOut<2>_MC.Q | dataOut<2>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | dataOut<2> | 6419 | PO | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | dataOut<2> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | dataOut<3>_MC | FourBitALU_COPY_0_COPY_0 | 0 | 12 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Temp<3> | 6423 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<3>_MC.Q | Temp<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<3>_II/UIM | 6304 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<3>_II/UIM | 6327 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_65 | 6401 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_65_MC.Q | N_PZ_65_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<2>_II/UIM | 6320 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<3>_II/UIM | 6311 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | dataOut<3>_MC.Q | 6429 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | dataOut<3>_MC.Q | dataOut<3>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | dataOut<3>_MC.SI | dataOut<3>_MC | 0 | 12 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Temp<3> | 6423 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<3>_MC.Q | Temp<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<3>_II/UIM | 6304 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<3>_II/UIM | 6327 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_65 | 6401 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_65_MC.Q | N_PZ_65_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<2>_II/UIM | 6320 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<2>_II/UIM | 6329 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<1>_II/UIM | 6331 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerB<3>_II/UIM | 6311 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerB<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | opCode<0>_II/UIM | 6356 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | opCode<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<0>_II/UIM | 6347 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | registerA<1>_II/UIM | 6338 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | registerA<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | dataOut<3>_MC.D1 | 6422 | ? | 0 | 0 | dataOut<3>_MC | NULL | NULL | dataOut<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | dataOut<3>_MC.D2 | 6421 | ? | 0 | 0 | dataOut<3>_MC | NULL | NULL | dataOut<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | N_PZ_28 | IV_TRUE | Temp<3>
+SPPTERM | 3 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | N_PZ_65
+SPPTERM | 4 | IV_TRUE | registerA<3>_II/UIM | IV_TRUE | registerA<2>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM
+SPPTERM | 4 | IV_TRUE | registerA<2>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | registerB<3>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_TRUE | opCode<0>_II/UIM
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | registerA<1>_II/UIM
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM
+SPPTERM | 5 | IV_FALSE | registerA<3>_II/UIM | IV_TRUE | registerB<3>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM
+SPPTERM | 6 | IV_TRUE | registerA<3>_II/UIM | IV_TRUE | registerB<3>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_TRUE | opCode<0>_II/UIM
+SPPTERM | 8 | IV_FALSE | registerA<3>_II/UIM | IV_TRUE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_TRUE | registerA<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_TRUE | opCode<0>_II/UIM
+SPPTERM | 8 | IV_FALSE | registerA<3>_II/UIM | IV_FALSE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | registerA<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+
+SRFF_INSTANCE | dataOut<3>_MC.REG | dataOut<3>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | dataOut<3>_MC.D | 6420 | ? | 0 | 0 | dataOut<3>_MC | NULL | NULL | dataOut<3>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | dataOut<3>_MC.Q | 6428 | ? | 0 | 0 | dataOut<3>_MC | NULL | NULL | dataOut<3>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Latch+PrldLow | Temp<3>_MC | FourBitALU_COPY_0_COPY_0 | 1088 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_26 | 6305 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_26_MC.Q | N_PZ_26_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0001__or0001 | 6357 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0001__or0001_MC.Q | Madd_Temp_addsub0001__or0001_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 6377 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Temp<3> | 6423 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Temp<3>_MC.Q | Temp<3>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Temp<3>_MC.SI | Temp<3>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_26 | 6305 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_26_MC.Q | N_PZ_26_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_16 | 6321 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_16_MC.Q | N_PZ_16_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Madd_Temp_addsub0001__or0001 | 6357 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | Madd_Temp_addsub0001__or0001_MC.Q | Madd_Temp_addsub0001__or0001_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Temp<3>_MC.D1 | 6426 | ? | 0 | 0 | Temp<3>_MC | NULL | NULL | Temp<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | N_PZ_26 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Temp<3>_MC.D2 | 6427 | ? | 0 | 0 | Temp<3>_MC | NULL | NULL | Temp<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | N_PZ_16 | IV_FALSE | Madd_Temp_addsub0001__or0001 | IV_TRUE | N_PZ_28
+
+SRFF_INSTANCE | Temp<3>_MC.REG | Temp<3>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Temp<3>_MC.D | 6425 | ? | 0 | 0 | Temp<3>_MC | NULL | NULL | Temp<3>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 6377 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Temp<3>_MC.Q | 6424 | ? | 0 | 0 | Temp<3>_MC | NULL | NULL | Temp<3>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | dataOut<3> | FourBitALU_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | dataOut<3>_MC.Q | 6429 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | dataOut<3>_MC.Q | dataOut<3>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | dataOut<3> | 6430 | PO | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | dataOut<3> | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | FourBitALU_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | dataOut<2>_MC | 1 | NULL | 0 | dataOut<2> | 1 | 38 | 49152
+FBPIN | 2 | dataOut<3>_MC | 1 | NULL | 0 | dataOut<3> | 1 | 37 | 49152
+FBPIN | 3 | dataOut<1>_MC | 1 | NULL | 0 | dataOut<1> | 1 | 36 | 49152
+FBPIN | 9 | dataOut<0>_MC | 1 | NULL | 0 | dataOut<0> | 1 | 34 | 53248
+FBPIN | 10 | NULL | 0 | opCode<0>_II | 1 | NULL | 0 | 33 | 53248
+FBPIN | 11 | NULL | 0 | opCode<1>_II | 1 | NULL | 0 | 32 | 53248
+FBPIN | 12 | NULL | 0 | opCode<2>_II | 1 | NULL | 0 | 31 | 53248
+FBPIN | 13 | NULL | 0 | opCode<3>_II | 1 | NULL | 0 | 30 | 51200
+FBPIN | 14 | Temp<0>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 15 | Temp<1>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 16 | Madd_Temp_addsub0001__or0001_MC | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR2_ | FourBitALU_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | carryOut_MC | 1 | NULL | 0 | carryOut | 1 | 39 | 49152
+FBPIN | 2 | NULL | 0 | registerA<0>_II | 1 | NULL | 0 | 40 | 49152
+FBPIN | 3 | N_PZ_28_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 4 | N_PZ_71_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 5 | NULL | 0 | registerA<1>_II | 1 | NULL | 0 | 41 | 49152
+FBPIN | 6 | N_PZ_20_MC | 1 | registerA<2>_II | 1 | NULL | 0 | 42 | 49152
+FBPIN | 7 | N_PZ_17_MC | 1 | registerA<3>_II | 1 | NULL | 0 | 43 | 57344
+FBPIN | 8 | N_PZ_68_MC | 1 | registerB<0>_II | 1 | NULL | 0 | 44 | 57344
+FBPIN | 9 | Temp<2>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 10 | Madd_Temp_addsub0000__or0001_MC | 1 | registerB<1>_II | 1 | NULL | 0 | 1 | 57344
+FBPIN | 11 | Madd_Temp_addsub0000__or0002_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 12 | N_PZ_65_MC | 1 | registerB<2>_II | 1 | NULL | 0 | 2 | 49152
+FBPIN | 13 | N_PZ_16_MC | 1 | registerB<3>_II | 1 | NULL | 0 | 3 | 49152
+FBPIN | 14 | N_PZ_26_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 15 | Temp<4>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 16 | Temp<3>_MC | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR3_ | FourBitALU_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR4_ | FourBitALU_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | FourBitALU_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | FourBitALU_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 4 | 12 | CT_SI4
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 6389 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | FourBitALU_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_28 | 6372 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | N_PZ_28_MC.Q | N_PZ_28_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 4 | 12 | CT_SI4
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 6377 | ? | 0 | 0 | FourBitALU_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+
+CT_INSTANCE | FOOBAR3_ | FOOBAR3__ctinst | FourBitALU_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR4_ | FOOBAR4__ctinst | FourBitALU_COPY_0_COPY_0 | 0 | 0 | 0
+
+PLA | FOOBAR1_ | 56
+PLA_TERM | 0 | 
+SPPTERM | 4 | IV_TRUE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_TRUE | registerA<1>_II/UIM
+PLA_TERM | 1 | 
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_TRUE | opCode<0>_II/UIM
+PLA_TERM | 2 | 
+SPPTERM | 5 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+PLA_TERM | 3 | 
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+PLA_TERM | 4 | 
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+PLA_TERM | 5 | 
+SPPTERM | 6 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_TRUE | registerB<0>_II/UIM | IV_TRUE | opCode<0>_II/UIM
+PLA_TERM | 6 | 
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+PLA_TERM | 7 | 
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_TRUE | opCode<0>_II/UIM
+PLA_TERM | 8 | 
+SPPTERM | 4 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | N_PZ_20
+PLA_TERM | 9 | 
+SPPTERM | 2 | IV_TRUE | N_PZ_28 | IV_TRUE | Temp<0>
+PLA_TERM | 10 | 
+SPPTERM | 4 | IV_TRUE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM
+PLA_TERM | 11 | 
+SPPTERM | 5 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | N_PZ_17 | IV_TRUE | opCode<0>_II/UIM
+PLA_TERM | 12 | 
+SPPTERM | 2 | IV_TRUE | N_PZ_28 | IV_FALSE | Temp<1>
+PLA_TERM | 13 | 
+SPPTERM | 4 | IV_FALSE | registerA<2>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | N_PZ_28
+PLA_TERM | 14 | 
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_FALSE | registerA<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | N_PZ_28
+PLA_TERM | 15 | 
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | registerA<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_TRUE | opCode<0>_II/UIM | IV_FALSE | N_PZ_28
+PLA_TERM | 16 | 
+SPPTERM | 4 | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_FALSE | opCode<0>_II/UIM | IV_TRUE | N_PZ_65
+PLA_TERM | 17 | 
+SPPTERM | 3 | IV_FALSE | registerA<1>_II/UIM | IV_FALSE | N_PZ_28 | IV_TRUE | N_PZ_65
+PLA_TERM | 18 | 
+SPPTERM | 5 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_TRUE | N_PZ_17 | IV_FALSE | N_PZ_65
+PLA_TERM | 19 | 
+SPPTERM | 5 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | N_PZ_17 | IV_FALSE | registerB<1>_II/UIM | IV_FALSE | N_PZ_65
+PLA_TERM | 20 | 
+SPPTERM | 5 | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | registerA<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | N_PZ_28 | IV_FALSE | N_PZ_65
+PLA_TERM | 21 | 
+SPPTERM | 5 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_TRUE | opCode<0>_II/UIM | IV_TRUE | N_PZ_71
+PLA_TERM | 22 | 
+SPPTERM | 2 | IV_TRUE | N_PZ_28 | IV_FALSE | Temp<2>
+PLA_TERM | 23 | 
+SPPTERM | 5 | IV_FALSE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | registerA<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | N_PZ_28
+PLA_TERM | 24 | 
+SPPTERM | 5 | IV_FALSE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_TRUE | opCode<0>_II/UIM | IV_FALSE | N_PZ_28
+PLA_TERM | 25 | 
+SPPTERM | 3 | IV_FALSE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | N_PZ_65
+PLA_TERM | 26 | 
+SPPTERM | 4 | IV_TRUE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | N_PZ_65
+PLA_TERM | 27 | 
+SPPTERM | 4 | IV_FALSE | registerA<3>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_FALSE | N_PZ_65
+PLA_TERM | 28 | 
+SPPTERM | 6 | IV_TRUE | registerA<2>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_FALSE | opCode<0>_II/UIM | IV_FALSE | N_PZ_65
+PLA_TERM | 29 | 
+SPPTERM | 5 | IV_FALSE | registerB<2>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | N_PZ_71 | IV_FALSE | N_PZ_65
+PLA_TERM | 30 | 
+SPPTERM | 5 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | N_PZ_71 | IV_FALSE | N_PZ_65
+PLA_TERM | 31 | 
+SPPTERM | 6 | IV_TRUE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | registerA<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | N_PZ_28 | IV_FALSE | N_PZ_65
+PLA_TERM | 32 | 
+SPPTERM | 4 | IV_TRUE | registerA<2>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM
+PLA_TERM | 33 | 
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_TRUE | opCode<0>_II/UIM
+PLA_TERM | 34 | 
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+PLA_TERM | 35 | 
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | registerA<1>_II/UIM
+PLA_TERM | 36 | 
+SPPTERM | 4 | IV_TRUE | registerA<3>_II/UIM | IV_TRUE | registerA<2>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM
+PLA_TERM | 37 | 
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM
+PLA_TERM | 38 | 
+SPPTERM | 6 | IV_TRUE | registerA<3>_II/UIM | IV_TRUE | registerB<3>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_TRUE | opCode<0>_II/UIM
+PLA_TERM | 39 | 
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | registerB<3>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM
+PLA_TERM | 40 | 
+SPPTERM | 5 | IV_FALSE | registerA<3>_II/UIM | IV_TRUE | registerB<3>_II/UIM | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM
+PLA_TERM | 41 | 
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM
+PLA_TERM | 42 | 
+SPPTERM | 8 | IV_FALSE | registerA<3>_II/UIM | IV_TRUE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_TRUE | registerA<1>_II/UIM | IV_TRUE | registerA<0>_II/UIM | IV_TRUE | opCode<0>_II/UIM
+PLA_TERM | 43 | 
+SPPTERM | 5 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM
+PLA_TERM | 44 | 
+SPPTERM | 8 | IV_FALSE | registerA<3>_II/UIM | IV_FALSE | registerA<2>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_FALSE | registerA<1>_II/UIM | IV_FALSE | registerA<0>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+PLA_TERM | 45 | 
+SPPTERM | 2 | IV_TRUE | N_PZ_28 | IV_TRUE | Temp<3>
+PLA_TERM | 46 | 
+SPPTERM | 3 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | N_PZ_65
+PLA_TERM | 47 | 
+SPPTERM | 3 | IV_TRUE | registerA<1>_II/UIM | IV_TRUE | N_PZ_17 | IV_TRUE | N_PZ_71
+PLA_TERM | 48 | 
+SPPTERM | 4 | IV_FALSE | N_PZ_17 | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | N_PZ_20 | IV_TRUE | N_PZ_71
+PLA_TERM | 49 | 
+SPPTERM | 2 | IV_FALSE | N_PZ_20 | IV_TRUE | N_PZ_28
+PLA_TERM | 50 | 
+SPPTERM | 2 | IV_FALSE | registerB<2>_II/UIM | IV_FALSE | N_PZ_71
+PLA_TERM | 51 | 
+SPPTERM | 4 | IV_TRUE | N_PZ_16 | IV_TRUE | registerA<0>_II/UIM | IV_TRUE | N_PZ_20 | IV_TRUE | N_PZ_28
+PLA_TERM | 52 | 
+SPPTERM | 2 | IV_TRUE | N_PZ_17 | IV_TRUE | N_PZ_28
+PLA_TERM | 53 | 
+SPPTERM | 4 | IV_TRUE | N_PZ_16 | IV_FALSE | N_PZ_20 | IV_TRUE | opCode<0>_II/UIM | IV_TRUE | N_PZ_28
+PLA_TERM | 54 | 
+SPPTERM | 4 | IV_FALSE | N_PZ_16 | IV_FALSE | registerA<0>_II/UIM | IV_FALSE | N_PZ_20 | IV_TRUE | N_PZ_28
+PLA_TERM | 55 | 
+SPPTERM | 3 | IV_TRUE | N_PZ_16 | IV_TRUE | opCode<0>_II/UIM | IV_TRUE | N_PZ_28
+
+PLA | FOOBAR2_ | 38
+PLA_TERM | 0 | 
+SPPTERM | 3 | IV_FALSE | N_PZ_16 | IV_FALSE | Madd_Temp_addsub0001__or0001 | IV_TRUE | N_PZ_28
+PLA_TERM | 1 | 
+SPPTERM | 3 | IV_FALSE | registerA<3>_II/UIM | IV_TRUE | N_PZ_26 | IV_TRUE | N_PZ_16
+PLA_TERM | 2 | 
+SPPTERM | 4 | IV_FALSE | N_PZ_26 | IV_TRUE | registerB<3>_II/UIM | IV_FALSE | N_PZ_16 | IV_FALSE | Madd_Temp_addsub0001__or0001
+PLA_TERM | 3 | 
+SPPTERM | 5 | IV_FALSE | N_PZ_26 | IV_FALSE | registerB<3>_II/UIM | IV_TRUE | Madd_Temp_addsub0000__or0002 | IV_FALSE | N_PZ_16 | IV_TRUE | Madd_Temp_addsub0001__or0001
+PLA_TERM | 4 | 
+SPPTERM | 1 | IV_TRUE | N_PZ_28
+PLA_TERM | 5 | 
+SPPTERM | 3 | IV_TRUE | N_PZ_26 | IV_TRUE | registerB<3>_II/UIM | IV_FALSE | Madd_Temp_addsub0000__or0002
+PLA_TERM | 6 | 
+SPPTERM | 3 | IV_FALSE | registerB<3>_II/UIM | IV_FALSE | Madd_Temp_addsub0000__or0002 | IV_TRUE | N_PZ_16
+PLA_TERM | 7 | 
+SPPTERM | 3 | IV_FALSE | registerA<3>_II/UIM | IV_FALSE | Madd_Temp_addsub0000__or0002 | IV_FALSE | Madd_Temp_addsub0001__or0001
+PLA_TERM | 8 | 
+SPPTERM | 1 | IV_FALSE | N_PZ_28
+PLA_TERM | 9 | 
+SPPTERM | 2 | IV_FALSE | registerA<3>_II/UIM | IV_TRUE | Madd_Temp_addsub0000__or0002
+PLA_TERM | 10 | 
+SPPTERM | 2 | IV_TRUE | Temp<4> | IV_TRUE | N_PZ_28
+PLA_TERM | 11 | 
+SPPTERM | 2 | IV_TRUE | registerA<3>_II/UIM | IV_FALSE | Madd_Temp_addsub0000__or0002
+PLA_TERM | 12 | 
+SPPTERM | 3 | IV_TRUE | registerB<2>_II/UIM | IV_TRUE | registerA<2>_II/UIM | IV_TRUE | N_PZ_16
+PLA_TERM | 13 | 
+SPPTERM | 4 | IV_FALSE | N_PZ_16 | IV_TRUE | Madd_Temp_addsub0000__or0001 | IV_FALSE | Madd_Temp_addsub0001__or0001 | IV_TRUE | N_PZ_71
+PLA_TERM | 14 | 
+SPPTERM | 3 | IV_TRUE | Madd_Temp_addsub0000__or0001 | IV_FALSE | N_PZ_71 | IV_TRUE | N_PZ_68
+PLA_TERM | 15 | 
+SPPTERM | 3 | IV_TRUE | N_PZ_71 | IV_FALSE | N_PZ_68 | IV_TRUE | N_PZ_28
+PLA_TERM | 16 | 
+SPPTERM | 3 | IV_FALSE | N_PZ_71 | IV_TRUE | N_PZ_68 | IV_TRUE | N_PZ_28
+PLA_TERM | 17 | 
+SPPTERM | 2 | IV_TRUE | registerB<2>_II/UIM | IV_TRUE | registerA<2>_II/UIM
+PLA_TERM | 18 | 
+SPPTERM | 2 | IV_FALSE | registerB<2>_II/UIM | IV_FALSE | registerA<2>_II/UIM
+PLA_TERM | 19 | 
+SPPTERM | 3 | IV_FALSE | opCode<3>_II/UIM | IV_TRUE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM
+PLA_TERM | 20 | 
+SPPTERM | 4 | IV_TRUE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+PLA_TERM | 21 | 
+SPPTERM | 1 | IV_TRUE | N_PZ_16
+PLA_TERM | 22 | 
+SPPTERM | 3 | IV_FALSE | opCode<2>_II/UIM | IV_FALSE | opCode<1>_II/UIM | IV_FALSE | opCode<0>_II/UIM
+PLA_TERM | 23 | 
+SPPTERM | 3 | IV_TRUE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM | IV_TRUE | registerA<1>_II/UIM
+PLA_TERM | 24 | 
+SPPTERM | 3 | IV_TRUE | N_PZ_16 | IV_TRUE | registerA<1>_II/UIM | IV_FALSE | N_PZ_17
+PLA_TERM | 25 | 
+SPPTERM | 4 | IV_TRUE | N_PZ_16 | IV_TRUE | N_PZ_17 | IV_TRUE | registerA<0>_II/UIM | IV_TRUE | N_PZ_20
+PLA_TERM | 26 | 
+SPPTERM | 3 | IV_FALSE | N_PZ_16 | IV_FALSE | N_PZ_17 | IV_TRUE | N_PZ_20
+PLA_TERM | 27 | 
+SPPTERM | 4 | IV_TRUE | N_PZ_16 | IV_TRUE | N_PZ_17 | IV_FALSE | N_PZ_20 | IV_TRUE | opCode<0>_II/UIM
+PLA_TERM | 28 | 
+SPPTERM | 2 | IV_TRUE | registerA<1>_II/UIM | IV_TRUE | N_PZ_17
+PLA_TERM | 29 | 
+SPPTERM | 3 | IV_FALSE | N_PZ_17 | IV_TRUE | registerA<0>_II/UIM | IV_FALSE | N_PZ_20
+PLA_TERM | 30 | 
+SPPTERM | 2 | IV_TRUE | registerA<1>_II/UIM | IV_FALSE | registerB<1>_II/UIM
+PLA_TERM | 31 | 
+SPPTERM | 2 | IV_FALSE | registerA<1>_II/UIM | IV_TRUE | registerB<1>_II/UIM
+PLA_TERM | 32 | 
+SPPTERM | 2 | IV_TRUE | registerA<0>_II/UIM | IV_TRUE | registerB<0>_II/UIM
+PLA_TERM | 33 | 
+SPPTERM | 2 | IV_FALSE | registerA<0>_II/UIM | IV_FALSE | registerB<0>_II/UIM
+PLA_TERM | 34 | 
+SPPTERM | 2 | IV_TRUE | Madd_Temp_addsub0000__or0001 | IV_TRUE | N_PZ_28
+PLA_TERM | 46 | 
+SPPTERM | 3 | IV_FALSE | opCode<3>_II/UIM | IV_FALSE | opCode<2>_II/UIM | IV_TRUE | opCode<1>_II/UIM
+PLA_TERM | 49 | 
+SPPTERM | 1 | IV_TRUE | registerB<3>_II/UIM
+PLA_TERM | 55 | 
+SPPTERM | 2 | IV_TRUE | N_PZ_26 | IV_TRUE | N_PZ_28
+
+BUSINFO | DATAOUT<3:0> | 4 | 0 | 1 | dataOut<0> | 3 | dataOut<1> | 2 | dataOut<2> | 1 | dataOut<3> | 0
+BUSINFO | OPCODE<3:0> | 4 | 0 | 0 | opCode<0> | 3 | opCode<1> | 2 | opCode<2> | 1 | opCode<3> | 0
+BUSINFO | REGISTERA<3:0> | 4 | 0 | 0 | registerA<0> | 3 | registerA<1> | 2 | registerA<2> | 1 | registerA<3> | 0
+BUSINFO | REGISTERB<3:0> | 4 | 0 | 0 | registerB<0> | 3 | registerB<1> | 2 | registerB<2> | 1 | registerB<3> | 0
+
+IOSTD | LVCMOS18
+registerA<3> | LVCMOS18
+registerB<3> | LVCMOS18
+registerB<2> | LVCMOS18
+registerA<2> | LVCMOS18
+opCode<3> | LVCMOS18
+opCode<2> | LVCMOS18
+opCode<1> | LVCMOS18
+registerA<1> | LVCMOS18
+registerB<1> | LVCMOS18
+registerA<0> | LVCMOS18
+registerB<0> | LVCMOS18
+opCode<0> | LVCMOS18
+carryOut | LVCMOS18
+dataOut<0> | LVCMOS18
+dataOut<1> | LVCMOS18
+dataOut<2> | LVCMOS18
+dataOut<3> | LVCMOS18
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 0 | N_PZ_16 | NULL | 1 | Temp<2> | NULL | 2 | N_PZ_65 | NULL | 3 | registerA<2> | 42 | 4 | Temp<3> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 5 | N_PZ_20 | NULL | 6 | Temp<0> | NULL | 7 | registerA<1> | 41 | 8 | Temp<1> | NULL | 9 | registerB<1> | 1
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 10 | N_PZ_17 | NULL | 11 | registerB<3> | 3 | 12 | N_PZ_28 | NULL | 13 | registerB<2> | 2 | 14 | N_PZ_71 | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 15 | registerB<0> | 44 | 20 | opCode<2> | 31 | 21 | registerA<3> | 43 | 22 | opCode<3> | 30 | 24 | opCode<0> | 33
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 29 | opCode<1> | 32 | 30 | registerA<0> | 40
+
+FB_IMUX_INDEX | FOOBAR1_ | 92 | 88 | 91 | 21 | 95 | 85 | 77 | 20 | 78 | 25 | 86 | 28 | 82 | 27 | 83 | 23 | -1 | -1 | -1 | -1 | 11 | 22 | 12 | -1 | 9 | -1 | -1 | -1 | -1 | 10 | 17 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 0 | N_PZ_16 | NULL | 1 | Madd_Temp_addsub0001__or0001 | NULL | 2 | registerB<0> | 44 | 3 | registerA<2> | 42 | 4 | N_PZ_68 | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 5 | N_PZ_20 | NULL | 6 | Temp<4> | NULL | 7 | Madd_Temp_addsub0000__or0001 | NULL | 8 | N_PZ_26 | NULL | 9 | Madd_Temp_addsub0000__or0002 | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 10 | N_PZ_17 | NULL | 11 | registerB<3> | 3 | 12 | N_PZ_28 | NULL | 13 | registerB<2> | 2 | 14 | N_PZ_71 | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 18 | registerB<1> | 1 | 20 | opCode<2> | 31 | 21 | registerA<3> | 43 | 22 | opCode<3> | 30 | 24 | opCode<0> | 33
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 29 | opCode<1> | 32 | 30 | registerA<1> | 41 | 35 | registerA<0> | 40
+
+FB_IMUX_INDEX | FOOBAR2_ | 92 | 79 | 23 | 21 | 87 | 85 | 94 | 89 | 93 | 90 | 86 | 28 | 82 | 27 | 83 | -1 | -1 | -1 | 25 | -1 | 11 | 22 | 12 | -1 | 9 | -1 | -1 | -1 | -1 | 10 | 20 | -1 | -1 | -1 | -1 | 17 | -1 | -1 | -1 | -1
+
+

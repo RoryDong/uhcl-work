@@ -1,0 +1,36 @@
+Pin Freeze File:  version P.49d
+
+2C64A44VQ XC2C64A-7-VQ44
+opCode<0> S:PIN33
+opCode<1> S:PIN32
+opCode<2> S:PIN31
+opCode<3> S:PIN30
+registerA<0> S:PIN40
+registerA<1> S:PIN41
+registerA<2> S:PIN42
+registerA<3> S:PIN43
+registerB<0> S:PIN44
+registerB<1> S:PIN1
+registerB<2> S:PIN2
+registerB<3> S:PIN3
+carryOut S:PIN39
+dataOut<0> S:PIN34
+dataOut<1> S:PIN36
+dataOut<2> S:PIN38
+dataOut<3> S:PIN37
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 dataOut<2> dataOut<3> dataOut<1>
+PARTITION FB1_9 dataOut<0>
+PARTITION FB1_14 Temp<0> Temp<1> Madd_Temp_addsub0001__or0001
+PARTITION FB2_1 carryOut
+PARTITION FB2_3 N_PZ_28 N_PZ_71
+PARTITION FB2_6 N_PZ_20 N_PZ_17 N_PZ_68 Temp<2>
+		 Madd_Temp_addsub0000__or0001 Madd_Temp_addsub0000__or0002 N_PZ_65 N_PZ_16
+		 N_PZ_26 Temp<4> Temp<3>
+
+
+

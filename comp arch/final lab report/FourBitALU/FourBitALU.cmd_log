@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "C:/Users/bakerw3779/FourBitALU/FourBitALU.xst" -ofn "C:/Users/bakerw3779/FourBitALU/FourBitALU.syr" 
+xst -intstyle ise -ifn "C:/Users/bakerw3779/FourBitALU/FourBitALU.xst" -ofn "C:/Users/bakerw3779/FourBitALU/FourBitALU.syr" 
+xst -intstyle ise -ifn "C:/Users/bakerw3779/FourBitALU/FourBitALU.xst" -ofn "C:/Users/bakerw3779/FourBitALU/FourBitALU.syr" 
+xst -intstyle ise -ifn "C:/Users/bakerw3779/FourBitALU/FourBitALU.xst" -ofn "C:/Users/bakerw3779/FourBitALU/FourBitALU.syr" 
+xst -intstyle ise -ifn "C:/Users/bakerw3779/FourBitALU/FourBitALU.xst" -ofn "C:/Users/bakerw3779/FourBitALU/FourBitALU.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc2c64a-VQ44-7 FourBitALU.ngc FourBitALU.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 FourBitALU.ngd 
+XSLTProcess FourBitALU_build.xml 
+tsim -intstyle ise FourBitALU FourBitALU.nga 
+hprep6 -s IEEE1149 -i FourBitALU 

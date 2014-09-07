@@ -1,0 +1,25 @@
+General INFO:
+Applying for graduate study at UTCS is straightforward but detailed. In particular, you have to submit two separate applications, one to the University and one to the Department. It's important to follow our procedures carefully to make sure your application receives full attention! Check out our Admissions FAQ for more info.
+
+DEADLINES FOR FALL
+ApplyTexas - December 1
+CS Department - December 16
+
+
+To work on your CS application, you will need to have these materials ready:
+
+Your official UT EID, so that we can match your application in our system to your University application. Remember, the two systems are completely separate and share no information other than your unique UT EID! You can get started on the rest of your CS application while you wait for GIAC to send you your UT EID. When you receive it, you can add it and finalize your application with us.
+
+Your general contact information, including your name, address, phone, URL if you have a personal web page, etc.
+Your standardized test scores.
+
+Your college attendance and degree information, and scanned copies of your official transcripts in Acrobat (.pdf) format.
+
+Your "Statement of Purpose" in either Acrobat (.pdf) or ASCII (.txt) format.1,2
+
+Contact info for three references. Each person must have a valid email address, since we will be sending them instructions for uploading their letter to your CS application.
+If your references use spam filtering, you might want to warn them to whitelist email from csadmis@cs.utexas.edu and todweb@cs.utexas.edu. 
+ 
+Reference letters should be uploaded by 5pm CST on Wednesday, December 18th, 2013. Any letters received after the deadline might not be included in the review of your application.
+
+(Optional) Your CV and up to 3 representative publications in either Acrobat (.pdf) or ASCII text (.txt) format.
