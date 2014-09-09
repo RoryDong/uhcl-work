@@ -1,0 +1,71 @@
+\documentclass{amsart}
+\usepackage{fullpage}
+\usepackage{amsmath, amsfonts, amscd, epsfig, amssymb, amsthm}
+
+\begin{document}
+
+%\newcounter{chapter}
+%\numberwithin{section}{chapter}
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+\newcommand{\newproblem}[2]{
+\setcounter{exercise}{#1}\addtocounter{exercise}{
+    -1}\begin{exercise}#2\end{exercise}
+    }
+\newcommand{\setcontext}[2]{\setcounter{chapter}{#1}\setcounter{section}{#2}}
+\newcommand{\s}[1]{\mathcal{#1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+
+
+\title{Math Bootcamp Chapter 2 HW}
+\author{Jeremy Bejarano}
+\maketitle
+
+%\setcontext{1}{1}
+
+\newproblem{1}{Verify the polarization and parallelogram identities on a real vector space:
+\begin{enumerate}
+\item $\langle x,y \rangle = \frac{1}{4} (\| x + y \|_2^2 - \|x - y\|_2^2)$
+\item $\|x\|_2^2 + \|y\|_2^2 = \frac{1}{2} (\|x + y\|_2^2 + \|x - y\|_2^2)$
+\end{enumerate}
+}
+    \begin{proof}
+    Starting with the right-hand side of part (a).
+    \begin{align*}
+    \frac{1}{4} (\| x + y \|_2^2 - \|x - y\|_2^2) &=  \frac{1}{4}(\langle x+y,x+y\rangle - \langle x-y,x-y \rangle) \\
+    &= \frac{1}{4}(\langle x+y,x\rangle + \langle x+y,y\rangle - \langle x-y,x-y \rangle) \\
+    &= \frac{1}{4}(\langle x+y,x\rangle + \langle x+y,y\rangle - (\langle x-y,x \rangle - \langle x-y,y \rangle )) \\
+    &= \frac{1}{4}(\langle x,x\rangle + \langle y,x\rangle + \langle x,y\rangle + \langle y,y\rangle - \langle x-y,x \rangle + \langle x-y,y \rangle ) \\
+    &= \frac{1}{4}(\langle y,x\rangle + \langle x,y\rangle + \langle y,x \rangle + \langle x,y \rangle) \\
+    &= \frac{1}{4}(\langle x,y\rangle + \langle x,y\rangle + \langle x,y \rangle + \langle x,y \rangle) \\
+    &= \langle x,y \rangle
+    \end{align*}
+    
+    Now, for part (b), we again start with the right-hand side.
+    
+    \begin{align*}
+    \frac{1}{2} (\|x + y\|_2^2 + \|x - y\|_2^2) &= \frac{1}{2} (\langle x+y,x+y \rangle + \langle x-y,x-y \rangle) \\
+    &= \frac{1}{2} (\langle x+y,x \rangle + \langle x+y,y \rangle + \langle x-y,x \rangle - \langle x-y,y \rangle) \\
+    &= \frac{1}{2} (\langle x,x \rangle + \langle y,x \rangle + \langle x,y \rangle + \langle y,y \rangle + \langle x,x \rangle - \langle y,x \rangle - \langle x,y \rangle + \langle y,y \rangle) \\
+    &= \frac{1}{2} (\langle x,x \rangle+ \langle y,y \rangle + \langle x,x \rangle + \langle y,y \rangle) \\
+    &= \frac{1}{2} ( 2\langle x,x \rangle + 2\langle y,y \rangle) \\
+    &= \langle x,x \rangle + \langle y,y \rangle \\
+    &= \|x\|_2^2 + \|y\|_2^2
+    \end{align*}
+
+    \end{proof}
+
+\end{document}
+
+
+
+
+
+
+
+
+
