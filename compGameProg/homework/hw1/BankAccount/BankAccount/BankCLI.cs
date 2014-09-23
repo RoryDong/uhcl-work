@@ -53,50 +53,38 @@ namespace BankAccount
         {
             while(true)
             {
-                switch(_userState)
-                {
-                    case BankUserState.USER_NOT_LOGGED_IN:
-                        _loginMenu.performLoginMenuOption(_menuPrompt(_loginMenu), _userAccnts);
-                        if(_loginMenu.LoginSuccess)
-                        {
-                            _displayLoginSuccessText();
-                            _userState = BankUserState.USER_LOGGED_IN;
-                        }else if (_loginMenu.LoginFail)
-                        {
-                            _displayLoginFailText();
-                            _userState = BankUserState.USER_NOT_LOGGED_IN;
-                        }
-                        break;
-                    case BankUserState.USER_LOGGED_IN:
-                        _userMenu.performUserMenuOption(_menuPrompt(_userMenu), _loginMenu.ActiveUser);
-                        if(_userMenu.SwitchUser)
-                        {
-                            _userState = BankUserState.USER_NOT_LOGGED_IN;
-                        }else
-                        {
-                            _userState = BankUserState.USER_LOGGED_IN;
-                        }
-                        break;
-                    default:
-                        break;
-                }
+                _updateUserState();
+            }
+        }
 
-                /*
-                _loginMenu.performLoginMenuOption(_menuPrompt(_loginMenu), _userAccnts);
-                if(_loginMenu.LoginSuccess)
-                {
-                    // BUG HERE NEED TO SOLVE THIS. JUST USE A STATE MACHINE HERE.
-                    _displayLoginSuccessText();
-                    while(!_userMenu.SwitchUser)
+        private void _updateUserState()
+        {
+            switch(_userState)
+            {
+                case BankUserState.USER_NOT_LOGGED_IN:
+                    _loginMenu.performLoginMenuOption(_menuPrompt(_loginMenu), _userAccnts);
+                    if(_loginMenu.LoginSuccess)
                     {
-                        _userMenu.performUserMenuOption(_menuPrompt(_userMenu), _loginMenu.ActiveUser);
+                        _displayLoginSuccessText();
+                        _userState = BankUserState.USER_LOGGED_IN;
+                    }else if (_loginMenu.LoginFail)
+                    {
+                        _displayLoginFailText();
+                        _userState = BankUserState.USER_NOT_LOGGED_IN;
                     }
-                }
-                else if (_loginMenu.LoginFail)
-                {
-                    _displayLoginFailText();
-                }
-                */
+                    break;
+                case BankUserState.USER_LOGGED_IN:
+                    _userMenu.performUserMenuOption(_menuPrompt(_userMenu), _loginMenu.ActiveUser);
+                    if(_userMenu.SwitchUser)
+                    {
+                        _userState = BankUserState.USER_NOT_LOGGED_IN;
+                    }else
+                    {
+                        _userState = BankUserState.USER_LOGGED_IN;
+                    }
+                    break;
+                default:
+                    break;
             }
         }
         
