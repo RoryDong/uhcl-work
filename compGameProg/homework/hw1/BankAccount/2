@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace BankAccount
+{
+    class UserMenu : Menu
+    {
+        private Dictionary<String, MenuOption> _menuOptionsDict = new Dictionary<String,MenuOption>();
+        private List<MenuOption> _menuOptionsList = new List<MenuOption>();
+        private UserLoginOption _userLoginOption = new UserLoginOption();
+        private NewAccountOption _newAccntOption = new NewAccountOption();
+        private QuitOption _quitOption = new QuitOption();
+
+        public virtual void initializeMenu()
+        {
+//            _menuOptionsList.Add(new LoginOption());
+
+        }
+
+        public string displayMenu()
+        {
+            String return_string = "";
+            foreach (MenuOption option in _menuOptionsList)
+            {
+                option.displayOption();
+            }
+            return return_string;
+        }
+
+        public void performUserMenuOption(string cmd)
+        {
+
+        }
+
+        public List<MenuOption> MenuOptionsList
+        {
+            get { return _menuOptionsList; }
+            set { _menuOptionsList = value;  }
+        } 
+
+        public Dictionary<String, MenuOption> MenuOptionsDict
+        {
+            get { return _menuOptionsDict; }
+            set { }
+        }
+
+    }
+
+
+}
