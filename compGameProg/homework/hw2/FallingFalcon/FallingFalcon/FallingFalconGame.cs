@@ -27,9 +27,6 @@ namespace FallingFalcon
         // A movement speed for the player
         float playerMoveSpeed;
 
-        // Image used to display the static background
-//        Texture2D mainBackground;
-
         // Parallaxing Layers
         ParallaxingBackground bgLayer1;
 
@@ -49,8 +46,6 @@ namespace FallingFalcon
         {
             // Initialize the player class
             player = new Player();
-            // Set a constant player move speed
-            playerMoveSpeed = 8.0f;
 
             bgLayer1 = new ParallaxingBackground();
 
@@ -73,12 +68,11 @@ namespace FallingFalcon
 
             Vector2 playerPosition = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y
             + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
-            player.Initialize(playerAnimation, playerPosition);
+            player.Initialize(Window, playerAnimation, playerPosition);
 
             // Load the parallaxing background
             bgLayer1.Initialize(Content, "backgrounds/background", GraphicsDevice.Viewport.Width, -1);
 
-            //mainBackground = Content.Load<Texture2D>("backgrounds\background");
         }
 
         /// <summary>
@@ -88,6 +82,17 @@ namespace FallingFalcon
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
+        }
+
+        /// <summary>
+        /// Collects the game inputs.
+        /// </summary>
+        protected override void collectGameInputs()
+        {
+            // Save the previous state of the keyboard and game pad to determine single key presses
+            previousKeyboardState = currentKeyboardState;
+            // Read the current state of the keyboard and gamepad and store it
+            currentKeyboardState = Keyboard.GetState();
         }
 
         /// <summary>
@@ -101,50 +106,16 @@ namespace FallingFalcon
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // Save the previous state of the keyboard and game pad to determine single key presses
-            previousKeyboardState = currentKeyboardState;
-            // Read the current state of the keyboard and gamepad and store it
-            currentKeyboardState = Keyboard.GetState();
+            // collect the game inputs
+            collectGameInputs();
 
             //Update the player
-            UpdatePlayer(gameTime);
+            player.Update(gameTime, currentKeyboardState);
 
             // Update the parallaxing background
             bgLayer1.Update();
 
             base.Update(gameTime);
-        }
-
-        private void UpdatePlayer(GameTime gameTime)
-        {
-            player.Update(gameTime);
-
-            // Use the Keyboard / Dpad
-            if (currentKeyboardState.IsKeyDown(Keys.Left))
-            {
-                player.Position.X -= playerMoveSpeed;
-            }
-            if (currentKeyboardState.IsKeyDown(Keys.Right))
-            {
-                player.Position.X += playerMoveSpeed;
-            }
-            if (currentKeyboardState.IsKeyDown(Keys.Up))
-            {
-                player.Position.Y -= playerMoveSpeed;
-            }
-            if (currentKeyboardState.IsKeyDown(Keys.Down))
-            {
-                player.Position.Y += playerMoveSpeed;
-            }
-            // Make sure that the player does not go out of bounds
-            if (player.Position.X < 0)
-                player.Position.X = 0;
-            if (player.Position.Y < 0)
-                player.Position.Y = 0;
-            if (player.Position.X > Window.ClientBounds.Width - player.Width)
-                player.Position.X = Window.ClientBounds.Width - player.Width;
-            if (player.Position.Y > Window.ClientBounds.Height - player.Height)
-                player.Position.Y = Window.ClientBounds.Height - player.Height;
         }
 
         /// <summary>
