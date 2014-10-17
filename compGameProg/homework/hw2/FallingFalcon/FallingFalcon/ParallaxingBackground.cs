@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 
-namespace Shooter
+namespace FallingFalcon
 {
     class ParallaxingBackground
     {

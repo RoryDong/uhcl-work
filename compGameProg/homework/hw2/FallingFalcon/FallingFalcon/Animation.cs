@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Shooter
+namespace FallingFalcon
 {
     class Animation
     {
@@ -20,6 +20,8 @@ namespace Shooter
         int frameTime;
         // The number of frames that the animation contains
         int frameCount;
+        int framesPerRow;
+        int framesPerCol;
         // The index of the current frame we are displaying
         int currentFrame;
         // The color of the frame we will be displaying
@@ -40,13 +42,15 @@ namespace Shooter
         public Vector2 Position;
 
 
-        public void Initialize(Texture2D texture, Vector2 position, int frameWidth, int frameHeight, int frameCount, int frametime, Color color, float scale, bool looping)
+        public void Initialize(Texture2D texture, Vector2 position, int frameWidth, int frameHeight, int frameCount, int framesPerRow, int framesPerCol, int frametime, Color color, float scale, bool looping)
         {
             // Keep a local copy of the values passed in
             this.color = color;
             this.FrameWidth = frameWidth;
             this.FrameHeight = frameHeight;
             this.frameCount = frameCount;
+            this.framesPerRow = framesPerRow;
+            this.framesPerCol = framesPerCol;
             this.frameTime = frametime;
             this.scale = scale;
             Looping = looping;
@@ -91,7 +95,7 @@ namespace Shooter
             }
 
             // Grab the correct frame in the image strip by multiplying the currentFrame index by the frame width
-            sourceRect = new Rectangle(currentFrame * FrameWidth, 0, FrameWidth, FrameHeight);
+            sourceRect = new Rectangle((currentFrame%framesPerRow)*FrameHeight, (currentFrame/framesPerCol)*FrameHeight, FrameWidth, FrameHeight);
 
             // Grab the correct frame in the image strip by multiplying the currentFrame index by the frame width
             destinationRect = new Rectangle((int)Position.X - (int)(FrameWidth * scale) / 2,
