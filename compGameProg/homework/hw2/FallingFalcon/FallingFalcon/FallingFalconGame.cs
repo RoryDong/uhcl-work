@@ -87,7 +87,7 @@ namespace FallingFalcon
         /// <summary>
         /// Collects the game inputs.
         /// </summary>
-        protected override void collectGameInputs()
+        protected void collectGameInputs()
         {
             // Save the previous state of the keyboard and game pad to determine single key presses
             previousKeyboardState = currentKeyboardState;
