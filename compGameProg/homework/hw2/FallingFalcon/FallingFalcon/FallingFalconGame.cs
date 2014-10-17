@@ -78,7 +78,7 @@ namespace FallingFalcon
 
             playerDeathOverlay = Content.Load<Texture2D>("overlays/you_died");
 
-            Vector2 playerPosition = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y);
+            Vector2 playerPosition = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X+playerTexture.Width/3, GraphicsDevice.Viewport.TitleSafeArea.Y+playerTexture.Height/8);
             player.Initialize(Window, playerAnimation, playerPosition);
 
             // Load the parallaxing background

@@ -97,11 +97,6 @@ namespace FallingFalcon
             {
                 Position.X += playerMoveSpeed;
             }
-            if (kbState.IsKeyDown(Keys.Up))
-            {
-                Position.Y -= playerMoveSpeed;
-            }
-
             if (kbState.IsKeyUp(Keys.Space))
             {
                 alreadyDown = false;
