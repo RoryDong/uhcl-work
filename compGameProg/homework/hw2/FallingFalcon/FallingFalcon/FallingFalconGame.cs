@@ -21,14 +21,24 @@ namespace FallingFalcon
 
         // Represents the player 
         Player player;
+        // Player states
+        enum PlayerStatus { ALIVE, DEAD };
+        PlayerStatus playerStatus = PlayerStatus.ALIVE;
+
         // Keyboard states used to determine key presses
         KeyboardState currentKeyboardState;
         KeyboardState previousKeyboardState;
         // A movement speed for the player
         float playerMoveSpeed;
 
+        // The height offset constant (below screen) where the player dies... in px
+        const int playerDeathHeightOffset = 20;
+
         // Parallaxing Layers
         ParallaxingBackground bgLayer1;
+
+        // Status overlays
+        private Texture2D playerDeathOverlay;
 
         public FallingFalconGame()
         {
@@ -64,10 +74,11 @@ namespace FallingFalcon
             // Load the player resources
             Animation playerAnimation = new Animation();
             Texture2D playerTexture = Content.Load<Texture2D>("sprites/birdanimation");
-            playerAnimation.Initialize(playerTexture, Vector2.Zero, 150, 150, 9, 3, 3, 40, Color.White, 2f, true);
+            playerAnimation.Initialize(playerTexture, Vector2.Zero, 150, 150, 9, 3, 3, 16, Color.White, 2f, true);
 
-            Vector2 playerPosition = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y
-            + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
+            playerDeathOverlay = Content.Load<Texture2D>("overlays/you_died");
+
+            Vector2 playerPosition = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y);
             player.Initialize(Window, playerAnimation, playerPosition);
 
             // Load the parallaxing background
@@ -103,17 +114,26 @@ namespace FallingFalcon
         protected override void Update(GameTime gameTime)
         {
             // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            if (Keyboard.GetState().GetPressedKeys().Contains(Keys.Back))
                 this.Exit();
 
             // collect the game inputs
             collectGameInputs();
 
             //Update the player
-            player.Update(gameTime, currentKeyboardState);
+            if (playerStatus == PlayerStatus.ALIVE)
+            {
+                player.Update(gameTime, currentKeyboardState);
+            }
 
             // Update the parallaxing background
             bgLayer1.Update();
+
+            // Check for player death
+            if (player.Position.Y > Window.ClientBounds.Height+playerDeathHeightOffset)
+            {
+                playerStatus = PlayerStatus.DEAD;
+            }
 
             base.Update(gameTime);
         }
@@ -125,6 +145,9 @@ namespace FallingFalcon
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            Rectangle titleSafeArea = GraphicsDevice.Viewport.TitleSafeArea;
+            Vector2 center = new Vector2(titleSafeArea.X + titleSafeArea.Width / 2.0f,
+                             titleSafeArea.Y + titleSafeArea.Height / 2.0f);
 
             // Start drawing
             spriteBatch.Begin();
@@ -134,6 +157,13 @@ namespace FallingFalcon
 
             // Draw the Player
             player.Draw(spriteBatch);
+
+            if (playerStatus == PlayerStatus.DEAD)
+            {
+                // Draw status message.
+                Vector2 deathOverlaySize = new Vector2(playerDeathOverlay.Width, playerDeathOverlay.Height);
+                spriteBatch.Draw(playerDeathOverlay, center - deathOverlaySize / 2, Color.White);
+            }
 
             spriteBatch.End();
 

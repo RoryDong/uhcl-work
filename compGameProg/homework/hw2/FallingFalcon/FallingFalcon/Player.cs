@@ -22,10 +22,16 @@ namespace FallingFalcon
         public bool Active;
         // Amount of hit points that player has
         public int Health;
-        // Player's move speed. Hardcoded in initialize.
+        // Player's move speed. Set in initialize of hit points that player has
         private float playerMoveSpeed;
-        // The game window instance.
+        // Player's "gravity constant"... the number of pixels the player's height decreases per second.
+        private float gravityConstant;
+        // Amount of hit points that player has
         private GameWindow viewWindow;
+        // Used for a conversion later
+        private const float MILLI_SECS_PER_SEC = 1000.0f;
+        // Flag used to determine if the space key is already being held down by the user.
+        private bool alreadyDown = false;
         // Get the width of the player ship
         public int Width
         {
@@ -56,7 +62,9 @@ namespace FallingFalcon
             Health = 100;
 
             // Set a constant player move speed
-            playerMoveSpeed = 8.0f;
+            playerMoveSpeed = 10.0f;
+            // Gravity constant for the player
+            gravityConstant = -10.0f;
         }
 
 
@@ -69,6 +77,14 @@ namespace FallingFalcon
         // Update the player animation
         public void Update(GameTime gameTime, KeyboardState kbState)
         {
+            // div by zero check
+            if (gameTime.ElapsedGameTime.Milliseconds > 0)
+            {
+                float dbugConv = (1.0f/(MILLI_SECS_PER_SEC/(float)gameTime.ElapsedGameTime.Milliseconds));
+                float heightDecrease = gravityConstant*dbugConv;
+                Position.Y -= heightDecrease;
+            }
+
             PlayerAnimation.Position = Position;
             PlayerAnimation.Update(gameTime);
 
@@ -85,10 +101,17 @@ namespace FallingFalcon
             {
                 Position.Y -= playerMoveSpeed;
             }
-            if (kbState.IsKeyDown(Keys.Down))
+
+            if (kbState.IsKeyUp(Keys.Space))
             {
-                Position.Y += playerMoveSpeed;
+                alreadyDown = false;
             }
+            else if (kbState.IsKeyDown(Keys.Space) && !alreadyDown)
+            {
+                Position.Y -= playerMoveSpeed;
+                alreadyDown = true;
+            }
+
             // Make sure that the player does not go out of bounds
             if (Position.X < 0)
                 Position.X = 0;
@@ -96,8 +119,6 @@ namespace FallingFalcon
                 Position.Y = 0;
             if (Position.X > viewWindow.ClientBounds.Width - Width)
                 Position.X = viewWindow.ClientBounds.Width - Width;
-            if (Position.Y > viewWindow.ClientBounds.Height - Height)
-                Position.Y = viewWindow.ClientBounds.Height - Height;
         }
 
 
