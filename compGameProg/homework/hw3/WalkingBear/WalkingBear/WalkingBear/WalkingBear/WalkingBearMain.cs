@@ -3,7 +3,7 @@ using System;
 namespace WalkingBear
 {
 #if WINDOWS || XBOX
-    static class WalkingBear
+    static class WalkingBearMain
     {
         /// <summary>
         /// The main entry point for the application.

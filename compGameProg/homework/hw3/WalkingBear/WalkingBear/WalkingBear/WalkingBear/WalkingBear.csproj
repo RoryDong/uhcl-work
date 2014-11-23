@@ -72,8 +72,12 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animation.cs" />
+    <Compile Include="ParallaxingBackground.cs" />
+    <Compile Include="BearTrap.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WalkingBear.cs" />
+    <Compile Include="WalkingBearMain.cs" />
     <Compile Include="WalkingBearGame.cs" />
   </ItemGroup>
   <ItemGroup>
