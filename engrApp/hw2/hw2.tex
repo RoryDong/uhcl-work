@@ -1,0 +1,262 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{amsmath, amsfonts, amscd, epsfig, amssymb, amsthm}
+\usepackage[]{mcode}
+\usepackage{listings}
+\usepackage{sectsty}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\sectionfont{\centering}
+\subsectionfont{}
+
+\begin{document}
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+
+\title{CENG5131 Homework Set \#2}
+\author{Mike Moore}
+\maketitle
+
+%\setcontext{1}{1}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%  Problem 1
+%----------------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Problem 1}
+\subsection*{Problem Statement}
+
+Find the locus of points in the complex plane that satisify the following
+equation:
+
+
+\[ \frac{z}{z-1} = 2, \]
+
+\subsection*{Problem Solution}
+Solving this problem will require substituing $z$ for $x + iy$ and 
+
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%  Problem 2
+%----------------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Problem 2}
+\subsection*{Problem Statement}
+
+Find the solutions to the equation $ z^3 = - 1 $ and write the answers as both 
+$a + ib$ and $|z|\angle\theta$. Then compute the cube root using MATLAB's ``roots'' command and multiply them together
+to check.
+
+\subsection*{Problem Solution}
+Solving this problem will require using De Moivre's theorem: 
+\[ a = r(\cos\theta + i\sin N\theta) \]
+Using this theorem we can write the roots of a as:
+\[ a^{1/N} = \sqrt[\leftroot{-2}\uproot{2}N]{r}[(\cos{(\frac{\theta}{N} + p\frac{2\pi}{N})} + i\sin{(\frac{\theta}{N} + p\frac{2\pi}{N})}] \]
+
+Where for the case of $ z^3 = -1 $, $ r = \sqrt[\leftroot{-2}\uproot{2}N]{r} = 1 \theta = pi , N = 3,$ and $ p = 1,2,3 $
+So, the cube roots of -1 are 
+\[ \sqrt[\leftroot{-2}\uproot{2}3]{-1} = \cos{(\frac{\pi}{3})} + i\sin{(\frac{\pi}{3})} = 1/2 + i\sin{\frac{\pi}{3}}\]
+\[ \sqrt[\leftroot{-2}\uproot{2}3]{-1} = \cos{(\frac{\pi}{3}} + \frac{2\pi}{3})} + i\sin{(\frac{\pi}{3}} + \frac{2\pi}{3})} = 1\]
+\[ \sqrt[\leftroot{-2}\uproot{2}3]{-1} = \cos{(\frac{\pi}{3}} + \frac{4\pi}{3})} + i\sin{(\frac{\pi}{3}} + \frac{4\pi}{3})} = 1/2 - i\sin{\frac{\pi}{3}}\]
+
+\section*{ Problem 2 Matlab Code}
+\lstinputlisting{prob2.m}
+
+\newpage
+\section*{ Problem 2 Matlab Output}
+\begin{verbatim}
+>> prob2
+
+a =
+
+  -1.0000 + 0.0000i
+   0.5000 + 0.8660i
+   0.5000 - 0.8660i
+
+
+check1 =
+
+    -1
+
+
+check2 =
+
+  -1.0000 + 0.0000i
+
+
+check3 =
+
+  -1.0000 - 0.0000i
+
+>> 
+\end{verbatim}
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%  Problem 4
+%----------------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section*{Problem 4}
+\subsection*{Problem Statement (parts 1 and 2)}
+
+Convert decimal to binary using MATLAB commands. Then convert back. Also, use MATLAB to convert 325.499 to
+a 16-bit integer.
+
+\section*{ Problem 4 Matlab Code}
+\lstinputlisting{prob3.m}
+
+\section*{ Problem 4 Matlab Output (parts 1 and 2)}
+\begin{verbatim}
+>> prob3
+
+a =
+
+1011
+
+
+b =
+
+    11
+
+
+intVal =
+
+    325
+
+
+ans =
+
+     2
+
+>> 
+\end{verbatim}
+
+\subsection*{Problem Statement (part 3)}
+Convert 0.3891 to 8-bit binary by hand.
+
+\[ 0.3891 \]
+\[ \underline{\hspace{0.8cm}2} \]
+\[ (0).7782 \]
+\[ \underline{\hspace{0.8cm}2} \]
+\[ (1).5564 \]
+\[ \underline{\hspace{0.8cm}2} \]
+\[ (1).1128 \]
+\[ \underline{\hspace{0.8cm}2} \]
+\[ (0).2256 \]
+\[ \underline{\hspace{0.8cm}2} \]
+\[ (0).4512 \]
+\[ \underline{\hspace{0.8cm}2} \]
+\[ (0).9024 \]
+\[ \underline{\hspace{0.8cm}2} \]
+\[ (1).8084 \]
+\[ \underline{\hspace{0.8cm}2} \]
+\[ (1).6096 \]
+
+So 0.3891 can be represented by the following 8-bit binary number 0.01100011
+
+\subsection*{Problem 4 (part 4)}
+The harmonic series diverges.
+
+
+
+%----------------------------------------------------------------------------------------
+%  Problem 5
+%----------------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section*{Problem 5}
+\subsection*{Problem Statement (part 1)}
+
+Derive the Taylor series for $e^{i\theta}$, $\cos{\theta}$, and $sin\theta$ and
+show that the Euler equation is correct.
+
+The general formula for the Taylor series is as follows:
+\[ &f(x) \\ &= f(a) + f'(a) (x-a) + \frac{f''(a)}{2!} (x - a)^2 + \frac{f^{(3)}(a)}{3!} (x - a)^3 + \dots + \frac{f^{(n)}(a)}{n!} (x - a)^n + \cdots \end{align} \]
+The Taylor series for $e^x$ can be derived as follows:
+\[f^{(n)}(x)=e^x \] 
+\[f^{(n)}(0)= 1 \]
+for $&n=0,1,2,3...$
+
+Using the general formula for a Taylor series and centering it at the origin (Maclaurin series), we arrive
+at the $e^x$ series expansion:
+\[e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \cdots = \sum_{n\geq 0} \frac{x^n}{n!}\]
+Which converges for all values of x
+
+The Taylor series for $\cos(x)$ can be derived as follows:
+
+f^{(n)}(x)=\left\{\begin{matrix}
+-\sin x &n=1,5,9,...\\ 
+-\cos x &n=2,6,10,...\\ 
+\sin x &n=3,7,11,...\\ 
+\cos x &n=0,4,8,12,... 
+\end{matrix}\right.
+f^{(n)}(0)=\left\{\begin{matrix}
+-1 &n=2,6,10,...\\ 
+1 &n=0,4,8,12 \\ 
+0 &\text{otherwise}
+\end{matrix}\right.
+
+Using the general formula for a Taylor series and centering it at the origin (Maclaurin series), we arrive
+at the $\cos{x}$ series expansion:
+\[\cos x = \sum_{n=0}^\infty{\frac{\cos^{(n)}(0)}{n!}x^n} \]
+Which converges for all values of x
+
+\newline
+The Taylor series for $\sin(x)$ can be derived in a very similar manner to the cosine series:
+
+
+\[\sin(x)=\sum\limits_{n=0}^\infty \dfrac{x^{2n+1}}{(2n+1)!}\cdot(-1)^n = x-\dfrac{x^3}{3!}+\dfrac{x^5}{5!}-\dfrac{x^7}{7!}\pm\dots\]
+
+
+So, with three series defined, it's easy to show:
+\[e^{ix} = 1 + x + \frac{(ix)^2}{2} + \frac{(ix)^3}{6} + \cdots = \sum_{n\geq 0} \frac{(ix)^n}{n!}\]
+\[ = 1 + ix + \frac{-x^2}{2} + \frac{-ix^3}{6} + \cdots \]
+\[ = (1 + ix + \frac{-x^2}{2} + \frac{-ix^3}{6} + \cdots ) + i (x - \dfrac{x^3}{3!} + \dfrac{x^5}{5!} - \dfrac{x^7}{7!} ...) \]
+\[ = \cos{x} + i\sin{x} \]
+
+\subsection*{Problem Statement (part 2)}
+Starting from Euler's formula, show that the following two equations holds:
+\[\cos (\theta) = \frac{e^{i\theta}+e^{-i\theta}}{2}\]
+\[\sin (\theta) = \frac{e^{i\theta}-e^{-i\theta}}{2i}\]
+
+Starting with Euler's forumla and the sum of $e^{i\theta}$
+\[e^{\pm i\theta } = \cos \theta \pm i\sin \theta \]
+\[e^{i\theta } + e^{-i\theta} = \cos \theta + i\sin \theta + \cos\theta - i\sin \theta  = 2\cos \theta\]
+So,
+\[\cos (\theta) = \frac{e^{i\theta}+e^{-i\theta}}{2}\]
+A similar thing can be done to prove the $\sin \theta$ identity:
+\[e^{i\theta } - e^{-i\theta} = \cos \theta + i\sin \theta - \cos\theta + i\sin \theta  = 2i\sin \theta\]
+So,
+\[\sin (\theta) = \frac{e^{i\theta}-e^{-i\theta}}{2i}\]
+\end{document}
+

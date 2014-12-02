@@ -1,0 +1,383 @@
+\documentclass[12pt]{article}
+%http://www.google.com/url?sa=t&rct=j&q=latex+hw+assignment+with+problem+numbers+and+letters&source=web&cd=3&ved=0CEMQFjAC&url=http%3A%2F%2Fmath.bd.psu.edu%2F~mlp17%2FCourseinfo%2Flatexsample.tex&ei=yBx_UZvAAueaiAKz5oCwBw&usg=AFQjCNEdQYHynYH8KFmM3xIep8d_UmM47w&sig2=5FbLuGsHX3zuqar_WBcluA&bvm=bv.45921128,d.cGE&cad=rja
+
+% ========================================================================
+% preamble
+% ========================================================================
+
+% (stuff that you don't have to mess with or worry about right now.)
+
+% margins, size, formatting
+\oddsidemargin=.05in
+\evensidemargin=.05in
+\topmargin=-.5in
+\textwidth=6in
+\textheight=9in
+\pagestyle{empty}
+
+% packages for fancy fonts, symbols, thm/proof environments, etc
+\usepackage{amsmath,amssymb,amsthm}
+
+% The format for HW problems
+% .................................................................
+% usage example (pretend it is problems #14.7 with parts c and f and #14.9 with parts a, b, and c):
+%
+% \begin{itemize}
+% \item[{\bf \large 14.7}]
+% Here is where you type your answer to the problem.  If there were
+% parts to the problem you would do something like the following:
+%
+% \begin{enumerate}
+% \item[(c)]
+% Here is where you type the answer to the first part.
+%
+% \item[(f)]
+% Here is where you type the answer to the second part.
+% \end{enumerate} (This ends the subproblems to #14.7)
+%
+% \item[{\bf \large 14.9}]
+%
+% \begin{itemize}
+% \item
+% Notice that since we are not skipping parts as in #14.7, we don't need
+% to specify parts a and b because LaTeX will automatically generate them.
+%
+% \item
+%
+% \item
+%
+% \end{enumerate} (This ends the subproblems to #14.9)
+% \end{enumerate} (This ends all of the hw problems)
+% .................................................................
+
+
+% ========================================================================
+% body
+% ========================================================================
+
+\begin{document}
+
+% header =================================================================
+% PLEASE FILL IN THE CORRECT COURSE (e.g., MATH 311W),
+% THE CORRECT ASSIGNMENT NUMBER, THE CORRECT PROBLEM TYPE
+%(i.e., 10pt problems or 20 pt problems), AND YOUR NAME HERE
+\centerline{\Large \bf MATH 311W Homework \#6}
+\vspace{\baselineskip}
+{\large \bf 10 point problems \hfill Sally Student}
+\vspace{\baselineskip}
+
+\begin{enumerate}
+% problem ================================================================
+\item[{\bf \large 14.1}] % notice the problem number here
+This sample document provides a template for writing a \LaTeX\
+document suitable for homework assignments in Dr. Previte's Math
+311W class. The first few ``problems'' will explain how the
+document works. Then there will be some ``problems'' that
+illustrate various notations and formatting environments.  Compare
+what is in the typeset version of this document to the file
+\verb|latexsample.tex|.  Note in particular that anything typed
+after a percent sign in the text file is treated as a comment and
+is ignored by the compiler. Comments in the text file refer both
+to \LaTeX\ and to hints about writing good solutions and proofs.
+% subproblems ================================================================
+\begin{enumerate}
+\item[(b)] %notice that we need to specify the part we want when we skip a part (part a, in this case)
+Notice that you don't have to do every part of a problem.  Here, we skipped part a.
+
+\item[(e)]
+Now we skip to part e.
+
+\end{enumerate}
+
+
+% problem ================================================================
+\item[{\bf \large 14.4}]
+All of your problem solutions should be contained in an
+``enumerate'' environment.  Problems with parts will also need
+``enumerate'' environments.  See the
+comment in the text file for the general usage format for these
+environments. Please use these environments so your homework will
+be in the standard format for the class.  Also please put the
+assignment number, the problem type and your name at the top of
+the page as they are in this sample document.
+
+
+% problem ================================================================
+
+\item[{\bf \large 14.5}]
+The very basics of \LaTeX\/ (compare the typeset document and the text file):
+
+\begin{enumerate}
+\item
+Extra spaces    in           the text              file do     not    appear   in    the     typeset     document.
+
+Except for a double carriage-return, that makes a new line.
+Single
+carriage
+returns
+don't
+do
+anything.
+
+
+\item
+Mathematical expressions are typed between dollar signs like this:
+$y=x^2+1$.  To make a centered equation on its own line, use
+double dollar signs, like this:
+%
+$$y=x^2+1.$$
+
+The percent sign above the equation in the text file just makes it
+so that extra space is not added between the centered equation and
+the main paragraph above.
+
+
+\item
+Many \LaTeX\ commands and math symbols start with a backslash
+symbol.  For example, $\sin x$ and $\{x \in \mathbb{R} : x \geq
+0\}$.  Notice that the set-notation parentheses need to have
+backslashes before them (while regular parentheses do not).  This
+is because in \LaTeX, those squiggly parentheses often have other
+uses.
+
+
+\item
+If you need to put something in italics you do it {\em like this}.
+Or maybe you need to have something in {\bf boldface}.  Or maybe
+{\bf \em both}.
+
+\item
+Notice that to have quotes appear ``correctly'' in the typeset
+document you may have to type them yourself using the \verb|`| and
+\verb|'| keys instead of the \verb|"| key.
+
+
+%\item
+%Don't forget to end each of your environments.  In other words,
+%don't forget your \verb|\end{enumerate}|, or
+%you will get a compiling error.  Also make sure to end dollar sign
+%environments and parentheses.
+
+\end{enumerate}
+
+% problem ================================================================
+\item[{\bf \large 15.3}]
+Here is some random notation you might need:
+\vspace{.5\baselineskip}
+% this "vspace" above just adds some vertical space.  note that
+% we can't add vertical space with carriage returns, so we have to
+% add it this way instead.  here "baselineskip" is the space of a line,
+% so we're skipping by half that.
+
+$x_2$,
+$x_{25}$, % note parentheses needed to get both digits in subscript
+$x^2$,
+$x^{25}$, % note parentheses needed to get both digits in exponent
+$\pm 4$,
+$x \not = 17$, % you can put "not" in front of lots of different operators
+$x > 5$,
+$x < 5$,
+$x \geq 5$,
+$x \leq 5$,
+$\{ 1, 2, 3 \}$, % note curly brackets need a backslash or they are invisible
+$\{ x : \sqrt{x} > 2 \}$, $\infty$.
+\vspace{.5\baselineskip}
+
+$A \subset B$,
+$A \subseteq B$,
+$A \not \subset B$,
+$A \not \subseteq B$,
+$A \setminus B$,
+$A^{\rm c}$, % "rm" changes the font to "roman", i.e. non-math, font
+$A \cap B$,
+$A \cup B$,
+$x \in A$,
+$x \not \in A$,
+$|A|$,
+$\mathcal{P}(A)$,
+$\emptyset$.
+\vspace{.5\baselineskip}
+
+$\overset{\mathcal{P}}{\equiv}$,
+$\frac{5}{1+x}$,
+$\displaystyle\frac{5}{1+x}$, % anything in $$ is automatically displaystyle
+$\bigcap_{i=1}^n S_i$,
+$\displaystyle\bigcap_{i=1}^n S_i$,
+$\bigcup_{i=1}^n S_i$,
+$\displaystyle\bigcup_{i=1}^n S_i$,
+$\sum_{k=1}^{10} a_k$,
+$\displaystyle\sum_{k=1}^{10} a_k$,
+$\prod_{k=1}^{10} a_k$,
+$\displaystyle\prod_{k=1}^{10} a_k$.
+\vspace{.5\baselineskip}
+% "displaystyle" is the default when using double dollar signs.
+% so you only need to use "displaystyle" in the rare case where you
+% want one of these oversized notations right in the middle of a line
+% of text, which is not usually what you want.  for centered equations,
+% everything will automatically be in "displaystyle".
+
+$\mathbb{R}$, % use this ONLY to denote the real numbers
+$\mathbb{Q}$, % rational numbers
+$\mathbb{Z}$, % integers
+$\mathbb{N}$, % natural numbers
+$\clubsuit$,
+$\diamondsuit$,
+$\heartsuit$,
+$\spadesuit$,
+$\rightarrow$,
+$\leftarrow$,
+$\leftrightarrow$,
+$\longrightarrow$,
+$\longleftarrow$,
+$\longleftrightarrow$,
+$\Rightarrow$, % the "implies" arrow
+$\Leftarrow$,
+$\Leftrightarrow$, % the "if and only if" arrow
+$\Longrightarrow$, % longer "implies" arrow
+$\Longleftarrow$,
+$\Longleftrightarrow$, % longer "if and only if" arrow
+$\mapsto$,
+$\longmapsto$.
+\vspace{.5\baselineskip}
+
+$\mathcal{P}$, % "mathcal" is a fancy font that can be applied to any letter.
+$\mathcal{S}$,
+$\mathcal{F}$,
+$\forall$,
+$\exists$,
+$\lor$, % think "logical or"
+$\land$, % think "logical and"
+$\neg$, % \lnot also works.  use this for logical negation (\sim looks funny)
+$\sim$, % use this for equivalence relations, it's made to be a binary operation
+$\approx$,
+$\equiv$,
+$\times$, % for cartesian products
+$\ast$,
+$\star$,
+$a | b$, % use this for "divides"
+$|x|$, % use this for absolute value
+$\|x\|$,
+$\lceil x \rceil$,
+$\lfloor x \rfloor$,
+$\{x \in \mathbb{Z} \mid x \mbox{ is prime} \}$. % note use of "mbox"
+% the "mbox" is needed so that we can have non-math type inside of the
+% math environment.  without the "mbox" the words would be in math/italics,
+% and all smushed together with no spaces between words.  notice also
+% the space before the word "is".
+\vspace{.5\baselineskip}
+
+$\gcd$, % in math mode, just "gcd" would be in italics, but "\gcd" is not
+${\rm lcm}$, % there isn't a command for "lcm" in tex so we just roman it
+$n \choose k$,
+$n+1 \choose k$, % no brackets needed, the n+1 is all assumed to be on top
+$a = {n+1 \choose k}$, % we need brackets or else "a=" would be in the choose
+$\prec$, % think "precedes"
+$\preceq$,
+$\succ$, % think "succeeds"
+$\succeq$,
+$f \colon [0,\infty) \rightarrow \mathbb{R}$,
+%\colon above looks better than using : in this application
+$f \circ g$ % composition
+\{, % these next few symbols mean particular things to latex
+\}, % so to get them to appear in your document you precede them with backslash
+\$, % notice that these are NOT in math mode
+\%,
+\&,
+\_,
+\#.
+
+
+% problem ================================================================
+\item[{\bf \large 15.9}] Suppose 43 students take algebra,
+32 take Spanish, 7 take both. \vspace{.5\baselineskip}
+% i like to put a little space between the initial problem information
+% and the solution, just to make it look nice.  note this isn't necessary
+% if the solution has parts (see above) or is a proof (see below)
+
+The number taking algebra or Spanish (or both, of course) is:
+%
+$$43 + 32 - 7 = 68.$$
+
+(We have to subtract 7 because those students are counted twice.)
+
+% for this problem, notice that i didn't just answer "68".
+% there is work!  and justification!  and some info at the beginning!
+
+
+
+% problem ================================================================
+\item[{\bf \large 15.10}]
+You don't have to do your truth tables in \LaTeX; you may write
+them in by hand if you like.  But in case you are interested, this
+is how to do it:
+
+\begin{center}
+\begin{tabular}{|c|c||c|c|c|c|}
+\hline
+$x$ & $y$ & $x \land y$ & $\neg(x \land y)$ & $\neg y$ & $\neg(x \land y) \land \neg y$ \\
+\hline
+T & T & T & F & F & F \\
+T & F & F & T & T & T \\
+F & T & F & T & F & F \\
+F & F & F & T & T & T \\
+\hline
+\end{tabular}
+\end{center}
+
+Since the truth-values for $\neg y$ and $\neg(x \land y) \land
+\neg y$ are the same for all possible truth-values of $x$ and $y$,
+the two statements are logically equivalent.
+
+
+% problem ================================================================
+\item[{\bf \large 14.2}]
+Prove that if $x$ and $y$ are both odd, then $x\equiv y \mod 2$.
+\begin{proof} % notice there is a built-in proof environment - use it!
+Let $x$ and $y$ be odd integers. %restating the hypothesis
+Then by definition of odd, there exist integers $m$ and $n$ such that $x = 2m+1$ and $y= 2n+1$. %unravelling the def of the term in the hypothesis
+Observe %here comes the link
+%
+\begin{align*} % the "%" on the line above just prevents added linespace
+x-y  &= (2m+1)- (2n+1) % "&=" gives an aligned equals.  the "&" is like "tab"
+     &\mbox{(since $x=2m+1$ and $y=2n+1$)} \\ % this is how you might provide a reason
+  &= 2m+1 -2n-1 \\
+  &= 2m -2n \\
+  &= 2(m-n).  % notice we are still using punctuation, even here!
+     &\mbox{(factor out a $2$)}
+\end{align*}
+% the "*" in the align environment just makes it so the equations are not
+% numbered.  in this example the reasons/justifications given for the
+% steps aren't really mathematically needed - they are pretty obvious - but
+% i put them here so you could see how to include them when necessary.
+
+So there exists $k \in \mathbb{Z}$, namely $k=m-n$, such that $x-y=2k$.
+Therefore, $2|(x-y)$.  % notice that i am unravelling the definition of the conclusion here
+Hence, $x\equiv y \mod 2$.
+
+\end{proof} % ending the proof environment automatically adds the "box"
+
+
+\vspace{2\baselineskip} %i put in some extra space may be helpful here to make seeing the two parts easier
+Prove that if $x$ and $y$ are both even, then $x\equiv y \mod 2$.
+\begin{proof}
+Then by definition of even, there exist integers $m$ and $n$ such that $x = 2m$ and $y= 2n$. %unravelling the def of the term in the hypothesis
+Observe %here comes the link
+%
+\begin{align*}
+x-y  &= 2m- 2n
+     &\mbox{(since $x=2m$ and $y=2n$)} \\
+  &= 2(m-n).
+     &\mbox{(factor out a $2$)}
+\end{align*}
+
+So there exists $k \in \mathbb{Z}$, namely $k=m-n$, such that $x-y=2k$.
+Therefore, $2|(x-y)$.  % notice that i am unravelling the definition of the conclusion here
+Hence, $x\equiv y \mod 2$.
+
+\end{proof} %
+
+
+\end{enumerate} % don't forget to end the enumerate environment after all that!
+
+
+\end{document} % every document must end with this.

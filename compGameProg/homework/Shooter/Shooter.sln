@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shooter", "Shooter\Shooter\Shooter.csproj", "{6B29378E-9CE3-4940-A53B-1ECFF6E34C78}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "ShooterContent", "Shooter\ShooterContent\ShooterContent.contentproj", "{C69914AA-FC21-4C3D-863C-B4E2F271D2EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B29378E-9CE3-4940-A53B-1ECFF6E34C78}.Debug|x86.ActiveCfg = Debug|x86
+		{6B29378E-9CE3-4940-A53B-1ECFF6E34C78}.Debug|x86.Build.0 = Debug|x86
+		{6B29378E-9CE3-4940-A53B-1ECFF6E34C78}.Release|x86.ActiveCfg = Release|x86
+		{6B29378E-9CE3-4940-A53B-1ECFF6E34C78}.Release|x86.Build.0 = Release|x86
+		{C69914AA-FC21-4C3D-863C-B4E2F271D2EB}.Debug|x86.ActiveCfg = Debug|x86
+		{C69914AA-FC21-4C3D-863C-B4E2F271D2EB}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

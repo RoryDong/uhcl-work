@@ -1,0 +1,230 @@
+\documentclass{amsart}
+\usepackage{fullpage}
+\usepackage{amsmath, amsfonts, amscd, epsfig, amssymb, amsthm}
+
+\begin{document}
+
+%\newcounter{chapter}
+%\numberwithin{section}{chapter}
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+\newcommand{\newproblem}[2]{
+\setcounter{exercise}{#1}\addtocounter{exercise}{
+    -1}\begin{exercise}#2\end{exercise}
+    }
+\newcommand{\setcontext}[2]{\setcounter{chapter}{#1}\setcounter{section}{#2}}
+\newcommand{\s}[1]{\mathcal{#1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+
+
+\title{Class101 Homework Set \#1}
+\author{Jeremy Bejarano}
+\maketitle
+
+%\setcontext{1}{1}
+
+\newproblem{1}{
+
+Suppose we choose any feasible capital policy, that is, any
+function $g_0$ satisfying $0 \leq g_0(k) \leq f(k)$, for all $ k\geq 0$. The
+lifetime utility yielded by this policy, as a function of the initial capital
+stock $k_0$, is
+
+\[ w_0 = \sum_{t=0}^{\infty} \beta^t U(f(k_t) - g_0(k_t)), \]
+
+where
+
+\[ k_{t+1} = g_0(k^t), \; t=0,1,2,....\]
+
+Show that $w_0 = U(f(k) - g_0(k)) + \beta w_o(g_0(k))$, for all $k \geq 0.$
+(From \emph{Recursive Methods in Economic Dynamics} by Stokey, Lucas, and
+Prescott with a  solution by Irigoyen, Rossi-Hansberg, and Wright.) 
+}
+    \begin{proof}     
+
+    Given $k_0 = k$, the lifetime utility given by the sequence
+    $\{k_1\}_{t=1}^{\infty}$ in which $k_{t+1} = g_0(k_t)$ is
+
+    \begin{align*}
+    w_0(k)  &= \sum_{t=0}^{\infty}\beta^t u(f(k_t) - g_0(k_t)) \\
+            &= u(f(k) - g_0(k) + \beta \sum_{t=1}^{\infty} \beta^{t-1} u(f(k_t) - g_0(k_t)).
+    \end{align*}
+
+    But
+
+    \begin{align*}
+    \sum_{t=1}^{\infty} \beta^{t-1} u(f(k_t) - g_0(k_t)) &= \sum_{t=0}^{\infty} \beta u(f(_{t+1}) - g_0(k_{t+1})) \\
+            &= w_0(k_1) \\
+        &= w_0(g_0(k)).
+    \end{align*}
+
+    Hence
+    \[ w_o = u(f(k) - g_0(k)) + \beta w_0(g_0(k)) \]
+    for all $k \geq 0$.
+
+    \end{proof}
+
+\newproblem{2}{Let G be any group. Prove that $\phi:G \rightarrow G$ where $g \mapsto g^{-1}$ is a homomorphism if and only if $G$ is abelian.}
+
+    \begin{proof}
+    Suppose that $\phi$ is a homomorphism. So, if $a,b \in G$, then 
+    
+    \begin{align*}
+    \phi(a b)       &= \phi(a) \phi(b) \\
+    (a b)^{-1}      &= a^{-1} \cdot b^{-1} \\
+    b^{-1} a^{-1}   &= a^{-1} \cdot b^{-1}.    
+    \end{align*}
+    
+    Taking the inverse of both sides (valid because G is a group), we get
+    \[ ab = ba. \] Thus, G is abelian.\\
+    
+    Conversely, suppose that G is abelian. By definition, given $a,b \in G$, we
+    have $a b = b a$. This implies that
+    
+    \begin{align*}
+    a b         &= b a \\
+    (a b)^{-1}  &= (b a)^{-1} \\
+    \phi(ab)    &= a^{-1} b^{-1} \\
+                &= \phi(a) \phi(b)
+    \end{align*}
+    
+    This satisfies the definition and, thus, $\phi$ is a homomorphism. (Note
+    that in this proof we inverted the product such that $(ab)^{-1} = b^{-1}
+    a^{-1}$. This is a basic property of all groups.)
+    
+    \end{proof}
+
+\newproblem{3}{Setup but do not solve the following problem. Marie recieves 1 large cake for her birthday and must decide how much of it to eat today (period 1), versus how much to eat tomorrow (period 2). She has a discount factor of $\delta = 0.7$, and a period utility function of $\ln b$, where $b$ is the fraction of the cake that is consumed that period. She can store the cake in the fridge overnight, but half of whatever is stored mysteriously disappears (her husband is likely to blame).}
+
+    \begin{proof}
+
+    Setup the problem as follows
+
+    \[ \max_{b_1,b_2,s} \ln(b_1) + 0.6 \ln(b_2) \text{ s.t. } b_1 + s \leq 1 \text{ and } b_2 \leq \frac{1}{2} s.\]
+
+    \end{proof}
+
+\newproblem{4}{}
+    
+    \begin{enumerate}
+    
+    \item Order of each element...
+    
+    Order of each element in $\mathbb{Z}_{12}$.
+    
+    \vspace{4pt}
+    
+    \paragraph{}
+    
+    \begin{tabular}{ll}
+    
+    Element in $\mathbb{Z}_{12}$ & Order of Element \\
+    \hline
+    element 0 & order 1 \\
+    element 1 & order 12 \\
+    element 2 & order 6 \\
+    element 3 & order 4 \\
+    element 4 & order 3 \\
+    element 5 & order 12 \\
+    element 6 & order 2 \\
+    element 7 & order 12 \\
+    element 8 & order 3 \\
+    element 9 & order 4 \\
+    element 10 & order 6 \\
+    element 11 & order 12
+    
+    \end{tabular}
+    
+    \vspace{8pt}
+    
+    Order of each element in $\mathbb{Z}_{15}$.
+    
+    \paragraph{}
+    \vspace{4pt}
+    
+    \begin{tabular}{ll}
+    
+    Element in $\mathbb{Z}_{15}$ & Order of Element \\
+    \hline
+    element 0 & order 1 \\
+    element 1 & order 15 \\
+    element 2 & order 15 \\
+    element 3 & order 5 \\
+    element 4 & order 15 \\
+    element 5 & order 3 \\
+    element 6 & order 5 \\
+    element 7 & order 15 \\
+    element 8 & order 15 \\
+    element 9 & order 5 \\
+    element 10 & order 3 \\
+    element 11 & order 15 \\
+    element 12 & order 5 \\
+    element 13 & order 15 \\
+    element 14 & order 15
+    
+    \end{tabular}
+    
+    \item Find the order of each element...
+    %Problem 1.b
+    
+    Order of each element in $U_{12}$.
+    \vspace{4pt}
+    \paragraph{}
+    \begin{tabular}{ll}
+    Element in $U_{12}$ & Order of Element \\
+    \hline
+    element 1 & order 1 \\
+    element 5 & order 5 \\
+    element 7 & order 7 \\
+    element 11 & order 11 \\
+    \end{tabular}
+    
+    Order of each element in $U_{15}$.
+    \vspace{4pt}
+    \paragraph{}
+    
+    \begin{tabular}{ll}
+    Element in $U_{15}$ & Order of Element \\
+    \hline
+    element 1 & order 1 \\
+    element 2 & order 8 \\
+    element 4 & order 4 \\
+    element 7 & order 13 \\
+    element 8 & order 2 \\
+    element 11 & order 11 \\
+    element 13 & order 7 \\
+    element 14 & order 14 \\
+    \end{tabular}
+    
+    \item Compute the order of ...
+    \paragraph{}
+    
+    Note that the order of a permutation in $S_n$ is given by the least common
+    multiple of the lengths of the disjoint cycles (see section 7.9, exercise
+    13).
+    
+    Because (1 12 8 10 4)(2 13)(5 11 7)(6 9) is comprised of disjoint cycles,
+    we can calculate the order by calculating the least common multiple,
+    \[lcm(5,2,3) = 30\].
+    
+    \item Compute ...
+    \paragraph{}
+    
+    (1 3 5 7 9)(2 4 6)(1 3 6 9)(2 4 6 8)(1 4 8)(2 5 7 9) = (5 9 6 8)(2 7 3)
+    
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
+
