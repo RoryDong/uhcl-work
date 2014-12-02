@@ -1,0 +1,149 @@
+Outline for Statement of Purpose
+
+1-1.5 pages single spaced. Don't have time to drone on and on. You gotta give
+short hard hitting summaries of skills and preferably examples indicating
+your motivation and skills.
+
+Part 1: Introduction Introduce yourself, your interests and motivations
+Tell them what you’re interested in, and perhaps, what sparked your desire for graduate study. This should be short and to the point; don’t spend a great deal of time on autobiography.
+
+ - Introduce myself and quick overview of my background and general interests.
+      - Aerospace Engineer, particularly interested and skilled in computers. 4 years of work exp.
+      Jack of all trades.
+      - Engineering is not just a job to me, it's a lifestyle. I have always been 
+        involved in engineering hobby projects. Some of which I will highlight in this 
+        statement of purpose.
+      - I understand that continuing education is critical in order for me to get to where I want to 
+      be in the engineering field. I am self taught in a lot of different areas, but I really want the
+      oppurtunity to take time away from work to dedicate my attention fully to formally learning advanced
+      engineering concepts and understanding the state of the art in the field of embedded systems and control.
+      - UC Berkeley is the best fit for my educational goals.
+
+
+Part 2: Summarize what you did as an undergraduate
+
+   - My undergraduate degree is in aerospace engineering. I love math and physics. Aero engineering was a
+     great undergraduate degree for me because it taught me about systems engineering.
+     - Throughout my degree I noticed that I would always seek out the software parts of aero. In group projects, I was always the one to volunteer to write the matlab code to do analysis. Many of my school mates avoided software. Many didn't understand the importance of software modelling in the aerospace industry. 
+     - Joined the JSC Trick initiative. Joined the CSR. Learned Linux and C. I had always had a decent understanding
+     of C, but this work is where I really started to get to put it to practice.
+     - My senior design project was no exception. I wrote code to model the thermodynamics of a robotic mission entering Venus' atmosphere. We presented to a large group of people in industry. My software model was of 
+     particular interest to JPL. Based on my presentation, they flew me out to Pasadena to interview. In the end,
+     I took a job in Houston at L3 Stratis, who specialized in modeling and simulation work for JSC.
+     - Additionally I have taken several night courses as part of a masters program at UHCL. My goal was to transfer
+     once I learned enough to feel confident in electrical engineering concepts and robotics/control.
+
+Part 3: If you graduated and worked for a while and are returning to grad school, indicate what you’ve been doing while 
+working.
+• You can discuss your company, work/design team, responsibilities, what you learned, etc. You can also indicate here 
+how this helped you focus on your graduate studies.
+
+For this section, it'll be better to give examples that demonstrate the skills you list here.
+
+  - One of the key things that I know I can bring to the table at UCB's graduate school is my professional experience. I'm not doing graduate school for the promise of a better job and more money. I love this stuff, and I want to understand it the best I can. I guarantee I will be a great worker for any advisor. I have an understanding of the relationship between advisor/advisee. I will produce solid work to engineer and bring professor's ideas to life. Real systems, not just
+  theory, but things that practically demonstrate the research. I'm not going to get stuck wasting time building 
+  models that are not useful to the end goal. My job has taught me that models are only as useful as their application. They are not a product in themselves, but a tool to enable better judgement in the engineering design process. Too many get stuck revelling the beauty of their model.
+  - I have risen quickly over my 4 years at L3. I have already worked on 4 different projects. In all cases my
+  project manager's have been sad to see me move on.
+  - I now am the modeling and simulation lead for vehicle subsystems. I do thermal, electrical, fluidic models. blah
+  blah. I build and use software models all the time to perform trade studies. Example of WRS. Co author and submitting a paper to ICES conference. I'm supplying all of the data/plots/analysis work. The other co-author is a design expert and
+  he's providing the context and potential application of high fidelity simulations to aid in NASA's design process.
+
+  - I know how to track down funding. In my job I often help present to higher up NASA HQ people in order to get funding. I wasn't always comfortable with public speaking, but my job has forced me to get good at it. I know the value of this skill, and it's a rarity among graduate engineering students. I can present at conferences. I can clearly describe the work that's being done and why it's important. I can help attract new grants/fudning oppurtunities. I have done it at my job at NASA. 
+
+  - I have practical engineering experience. I know how to write software on a team. I know how to architect software and the importance of testing. I have solved several critical integration problems at work. I know how to work 
+  late into the night and get shit done. I know how to manage my time, and not waste effort in unfruitful areas.
+
+My own custom part...my "extra-curriculurs"
+Hobby
+   - As I stated, engineering is not just a job to me. It's a lifestyle. I work on many, many projects outside of my 
+   work responsibility. One in particular that I'd like to highlight is a completely custom built quacopter. Many people buy these things and call them custom built, but few can say they wrote all of the flight control software. We know every nook and cranny of this quad. Mechanical design, electrical design, software design, assembly, soldering. It works. I have attached videos and documentation of the effort. It has taken almost two years. We work maybe 4 hours a week on it on average.
+   - It's a practical application of linear control theory, but the problems go so far beyond just that. Orientation filter difficulty. Quaternions. Wireless Communication. We have impressed several people at JSC and are in talks
+   with Texas A&M and JSC to get funding to work further on this. Specifically from groups interested in Cyber Physical Systems, Non-Linear control, etc. 
+   - Spin off technology with the IMU. We want to use our software as a part of a low cost wireless IMU package. We imagine being able to provide a low cost IMU solution for hobbyists. We want an IMU sensor network. I have seen that Berkeley has a somewhat new TerraSwarm project. I would like to propose a SwarmOS (Swarmlet) app that focuses on enabling wireless IMU sensor networks. Add details here about a specific proposal for IMU Swarmlet. If it's of interest, I can make it happen. If not, I am more than happy to contribute in other ways to research projects. That one in particular caught my attention when investigating the state of the art of wireless sensor networks
+   though.
+
+   - Quadcopter 3D simulation for flight control algorithm design. Developed all myself using a game engine. I have some thoughts on how to utilize a newly opensourced cutting edge game engine (Unreal Engine) to do rapid 3d simulation development for robotic systems. Imagine being able to take prototype controller design and 3d 
+   visualize the performance. Real CAD model tied in. Also have demonstrated that it can be run in the loop with hardware. See attached documentation and videos. I think this a new area opening up. Using these game engines in a way they were not necessarily intended. C++ simulation and high quality 3d visualization framework. This kind of thing is real eye candy as well. Most importantly though, I have demonstrated that it can be truly useful in the design of robotic control systems. Altitude control logic designed using this simulation. Non-linear controller
+   has proven itself to work in simulation. We are waiting to try it on our real system. 
+
+   -Again, I love this stuff... I have been doing engineering work practically 80% of my every day waking hours
+   for the past 2 years (which are quite long when you stay up late doing graduate homework or working on your hobbyist software projects.)
+
+Part 4: Here you indicate what you want to study in graduate school in greater detail.
+• This is a greater elaboration of your opening paragraph.
+• Indicate area of interest, then state questions you might have which are associated with the topic, i.e., what you might 
+be interested in studying. You should have an area of emphasis selected before you write the statement.
+• Call the department or look on the web for information about the professors and their research. Are there professors 
+whose interests match yours? If so, indicate this, as it shows a sign that you have done your homework and are 
+highly motivated. (Be sincere, however, don’t make up something bogus just to impress people.)
+
+
+    - Describe why and wtf you are doing at UHCL. Free paid for education by my company. Remember how I said 
+    I love this stuff. This is how I spend my free time. Night classes at the closest university. Taking advantage of my companies continuing education benefit. It has never been about the master's degree. I just needed to learn some new things in order to build my hobbyist robotics projects.
+
+    - Wireless sensor systems and communicaiton networks as input to high level controllers that control
+    based on machine learning concepts.
+    - Describe your IMU swarmlet idea.
+    - List a few other ideas.
+
+Part 5: Conclusion
+• End your statement in a positive and confident manner with a readiness for the challenges of graduate study.
+
+Conclusion
+    - I truly don't want this thing to be super long and go unread, but I have only talked about a few of my
+    major projecst. I have so many other things going on in parallel. I do inde game development. I contribute to open source projects. I enjoy web-app development and cloud based computing. I have written back-ends for we
+
+UC Berkeley is an ideal school for me. 
+
+Things to highlight
+
+
+
+
+Work exp
+
+
+
+
+
+
+
+
+Writing the Statement of Purpose
+The statement of purpose should convince readers– the faculty on the selection committee– that you have solid achievements behind you that show promise for your success in graduate study. Think of the statement of purpose as a composition with four different parts.
+
+Part 1: Introduce yourself, your interests and motivations
+Tell them what you’re interested in, and perhaps, what sparked your desire for graduate study. This should be short and to the point; don’t spend a great deal of time on autobiography.
+
+Part 2: Summarize your undergraduate and previous graduate career
+a) Research you conducted. Indicate with whom, the title of the project, what your responsibilities were, and the outcome. Write technically, or in the style of your discipline. Professors are the people who read these statements.
+
+b) Important paper or thesis project you completed, as well as anything scholarly beyond your curricular requirements.
+
+c) Work experience, especially if you had any kind of responsibility for testing, designing, researching or interning in an area similar to what you wish to study in graduate school.
+
+Part 3: Discuss the relevance of your recent and current activities
+If you graduated and worked prior to returning to grad school, indicate what you’ve been doing: company or non-profit, your work/design team, responsibilities, what you learned. You can also indicate here how this helped you focus your graduate studies.
+
+Part 4: Elaborate on your academic interests
+Here you indicate what you would like to study in graduate school in enough detail to convince the faculty that you understand the scope of research in their discipline, and are engaged with current research themes.
+
+a) Indicate the area of your interests. Ideally, pose a question, define a problem, or indicate a theme that you would like to address, and questions that arise from contemporary research. This should be an ample paragraph!
+
+b) Look on the web for information about departments you’re interested in, including professors and their research. Are there professors whose research interests parallel yours? If so, indicate this. Check the specific program; many may require you to name a professor or professors with whom you might work.
+
+c) End your statement in a positive manner, indicating your excitement and readiness for the challenges ahead of you.
+
+Essential Tips
+1. What the admissions committee will read between the lines: self-motivation, competence, potential as a graduate student.
+
+2. Emphasize everything from a positive perspective and write in an active, not a passive voice.
+
+3. Demonstrate everything by example; don’t say directly that you’re a persistent person, show it.
+
+4. If there is something important that happened to you that affected your grades, such as poverty, illness, or excessive work, state it. Write it affirmatively, showing your perseverance despite obstacles. You can elaborate more in your personal statement.
+
+5. Make sure everything is linked with continuity and focus.
+
+6. Unless the specific program says otherwise, be concise; an ideal essay should say everything it needs to with brevity. Approximately 500 to 1000 well-selected words (1-2 single space pages in 12 point font) is better than more words with less clarity and poor organization.
