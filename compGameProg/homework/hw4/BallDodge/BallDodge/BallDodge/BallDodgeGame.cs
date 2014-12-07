@@ -22,6 +22,12 @@ namespace BallDodge
 
         //Ball sprite
         Texture2D ball;
+
+        // Represents the player 
+        Player player;
+        // A movement speed for the player
+        float playerMoveSpeed;
+
         // Keyboard states used to determine key presses
         KeyboardState currentKeyboardState;
         KeyboardState previousKeyboardState;
@@ -46,6 +52,10 @@ namespace BallDodge
         /// </summary>
         protected override void Initialize()
         {
+            // Initialize the player class
+            player = new Player();
+            // Set a constant player move speed
+            playerMoveSpeed = 8.0f;
 
             base.Initialize();
         }
@@ -70,6 +80,15 @@ namespace BallDodge
 
             //Create and add ball bosy
             AddBallBody(new Vector2(100, 100), ball);
+
+            // Load the player resources
+            Animation playerAnimation = new Animation();
+            Texture2D playerTexture = Content.Load<Texture2D>("sprites/shipAnimation");
+            playerAnimation.Initialize(playerTexture, Vector2.Zero, 115, 69, 8, 30, Color.White, 1f, true);
+
+            Vector2 playerPosition = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y
+            + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
+            player.Initialize(playerAnimation, playerPosition);
 
         }
 
@@ -132,12 +151,16 @@ namespace BallDodge
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            base.Update(gameTime);
+
 
             // Save the previous state of the keyboard 
             previousKeyboardState = currentKeyboardState;
             // Read the current state of the keyboard and store it
             currentKeyboardState = Keyboard.GetState();
+
+            //Update the player
+            UpdatePlayer(gameTime);
+
             if ((previousKeyboardState.IsKeyDown(Keys.Enter)) && (currentKeyboardState.IsKeyUp(Keys.Enter)))
             {
                 //Apply linear velocity on ball body
@@ -147,7 +170,41 @@ namespace BallDodge
             //Update the bodies in physics world
             physicsWorld.Step((float)gameTime.ElapsedGameTime.TotalSeconds, 10, 3);
 
+            base.Update(gameTime);
         }
+
+        private void UpdatePlayer(GameTime gameTime)
+        {
+            player.Update(gameTime);
+
+            // Use the Keyboard / Dpad
+            if (currentKeyboardState.IsKeyDown(Keys.Left))
+            {
+                player.Position.X -= playerMoveSpeed;
+            }
+            if (currentKeyboardState.IsKeyDown(Keys.Right))
+            {
+                player.Position.X += playerMoveSpeed;
+            }
+            if (currentKeyboardState.IsKeyDown(Keys.Up))
+            {
+                player.Position.Y -= playerMoveSpeed;
+            }
+            if (currentKeyboardState.IsKeyDown(Keys.Down))
+            {
+                player.Position.Y += playerMoveSpeed;
+            }
+            // Make sure that the player does not go out of bounds
+            if (player.Position.X < 0)
+                player.Position.X = 0;
+            if (player.Position.Y < 0)
+                player.Position.Y = 0;
+            if (player.Position.X > Window.ClientBounds.Width - player.Width)
+                player.Position.X = Window.ClientBounds.Width - player.Width;
+            if (player.Position.Y > Window.ClientBounds.Height - player.Height)
+                player.Position.Y = Window.ClientBounds.Height - player.Height;
+        }
+
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -160,6 +217,9 @@ namespace BallDodge
             base.Draw(gameTime);
 
             spriteBatch.Begin();
+
+            // Draw the Player
+            player.Draw(spriteBatch);
 
             //Go through all the bodies added to the world
             for (var b = physicsWorld.GetBodyList(); b != null; b = b.GetNext())
