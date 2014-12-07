@@ -1,0 +1,23 @@
+ALL AI Heavy:
+Kamalika Chaudhuri
+Gary Cottrell
+Sanjoy Dasgupta
+Charles Elkan
+Yoav Freund
+Julian McAuley
+Lawrence Saul
+
+
+Good adviser candidates:
+Thomas Bewley -  PERFECT Flow Control & Coordinated Robotics Labs at UC San Diego
+follow up with an email to Prof. Bewley which summarizes your research interests
+Ryan Kastner - ALSO VERY PERFECT ...co-director of engineers for exploration...wireless embedded systems (most promising)
+
+Rsrch interests:
+Wireless sensor networks, sensor fusion, and adaptive filters. Model based control systems. Applications of artificial intelligence to high level control of robotic systems.
+
+My research experience
+Undergraduate student researcher at the University of Texas Austin Center for Space Research. I'm also currently working within R&D at NASA Johnson Space Center's Engineering Robotics, Software, and Simulation branch. I have no prior publications, although I am working to change that. I am actively working on a paper to be submitted to the 45th AIAA International Conference on Environmental Systems in Bellevue, Washington. The paper is currently titled: "Development of a Water Recovery System Resource Tracking Model for a Human Deep Space Habitat".
+
+Why Bewley and Kastner
+Both Dr. Kastner's and Dr. Bewley's research seems to require a particular skill set that I believe I have, and would like to further develop. From what I have read, Dr. Kastner's research group tends to focus on the areas of robotics, wireless sensor networks, sensor fusion, and application of FPGA's to these areas. All of these areas have a significant amount of depth to them, with many unsolved problems. I am already doing work in robotics, sensor fusion, and wireless networks as part of a personal hobby project. I think the transition to doing dedicated research in these areas would come naturally for me. Dr. Bewley also conducts research in robotics, and additionally, he makes use of models of dynamic systems for the purpose of designing feedback controllers. I am also interested in model based control, and I have a background at NASA JSC developing dynamic models using the equations of fluid mechanics and thermodynamics. Research under Dr. Bewley would allow me to combine what I do professionally with what I do for my own personal hobby. This would be the best possible environment for me, and would facilitate an intense level of focus which I hope to use towards great success in a master's program.

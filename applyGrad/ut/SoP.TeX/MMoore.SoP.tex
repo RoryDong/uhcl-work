@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage[
+  letterpaper,
+  margin=1in,
+  headsep=4pt, % separation between header rule and text
+]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{%
+  \footnotesize\sffamily
+  \yourname\quad
+  \textcolor{blue}{\youremail}}
+
+\newcommand{\soptitle}{Statement of Purpose}
+\newcommand{\yourname}{Michael Moore}
+\newcommand{\youremail}{michael.moore@nasa.gov}
+
+\newcommand{\statement}[1]{\par\medskip
+  \underline{\textcolor{blue}{\textbf{#1:}}}\space
+}
+
+\usepackage[
+  colorlinks,
+  breaklinks,
+  pdftitle={\yourname - \soptitle},
+  pdfauthor={\yourname},
+  unicode
+]{hyperref}
+
+\begin{document}
+
+\begin{center}\LARGE\soptitle\\
+\large of \yourname\ (ME MS applicant for Fall---2015)
+\end{center}
+
+\hrule
+\vspace{1pt}
+\hrule height 1pt
+
+\bigskip
+
+It is my hope that a master's degree within U.T.'s Mechanical Engineering department will push me
+to the cutting edge of robotics, artificial intelligence, and control
+systems. I must admit that I didn't start out with this goal. I received my B.S. in Aerospace Engineering at U.T. Austin in 2010. I then spent the past four years working as 
+an engineer at NASA Johnson Space Center within the Robotics, Software, and Simulation branch. I love my job
+and it represents the fulfillment of a lifelong dream. However, as I have advanced in
+my career, I have come to realize that this dream job comes with a serious set of responsibilities.
+I believe that a more formal education in robotics will enable me to make valuable contributions to the
+design of future robotic systems. I believe a master's degree from U.T. that specializes in the field of dynamic systems and control will empower me with the necessary skills to make these contributions.
+
+Unlike many other undergraduate Aerospace Engineers, I often actively sought out projects that involved
+large amounts of mathematical modeling and simulation. At first, I used my developing skills in this area to support my extra-curricular robotics hobbies. Pretty soon, however, I was able to find a way to get paid for these same skills. In my third year, I was able to get a job with my Systems Engineering professor doing undergraduate research at U.T.'s Center for Space Research (CSR). In this role, I was able to apply my knowledge of Unix, C, and Python programming to help post process scientific instrument data being downlinked
+from the pair of GRACE satellites which U.T. helps NASA to operate. In parallel with this effort,
+I was also spending late nights writing software to develop a model to help in my group's senior design project.
+I was able to build a math model and then simulate some of the thermodynamics involved in a hypothetical
+robotic space mission entering the atmosphere of Venus. At the end of our project, I presented my model to a
+large group of people in industry. My software model was of particular interest to NASA's Jet Propulsion
+Laboratory who was actively conducting design trade studies as a part of considering a future robotic 
+mission to Venus. Based on my presentation, they flew me out to Pasadena for a job interview. In the end,
+I took a job in Houston at L3 Communications to do modeling and simulation work for JSC. 
+
+I started out at JSC helping to build a simulator for NASA's Orion vehicle. My mentor and I built a nodal network solver that became the underlying solver architecture for the Orion simulation's electrical, thermal, and life support systems.
+The solver relies on nodal analysis techniques to simulate these systems in real-time.
+After successfully demonstrating early working versions of the solver, I was moved
+to a small simulation team within JSC's Advanced Exploration Systems.
+This project uses our software to aid in the design of future
+NASA vehicles. Specifically, proposed vehicles for deep space and Mars missions. 
+Our team builds software models of the current state of the vehicle design. NASA uses our
+models to conduct trade studies to evaluate the design in the context of a given mission architecture.
+In particular, I am the modeling and simulation lead for the thermal, electrical, and life support
+subsystems. My work, along with the rest of our teams work, has been demonstrated and well received 
+at the highest levels of NASA, including Dr. Jim Green, NASA's Planetary Science Division Director, and 
+the NASA administrator himself, Charlie Bolden.
+
+My specific interest in U.T. Austin goes far beyond the desire to return to my undergraduate institution.
+It is the top school that most closely aligns with my research interests. In particular, I am quite familiar with the research Dr. Luis Sentis is engaged in on NASA's Valkyrie humanoid robot. Not only is that work performed
+within the same division I work in at JSC, but I am also good friends with one of the civil servants involved in the effort. James Holley and I have been ``robotics buddies'' for nearly four years. He keeps me apprised of some of the Valkyrie activities. The two of us have also worked together on our own UAV hobby project. We recently completed a successful flight test of our custom built quad copter. Over the course of about a year and a half, we developed our own flight control system that runs on a TI CMS320 F2808 microcontroller. There is a lot of detail I could elaborate on with this system, but I must keep this short. However, consider that over 90\% of the software for the robot is our own. This includes the motor drivers, wireless communication, sensors, and control system aspects. I have included some videos with my application for proof that this system we built actually flies. To conclude, I am most eager for the opportunity to pursue research in the field of dynamic systems and control at UT Austin. I believe I can bring valuable skills and experience to a robotics research team. Dr. Luis Sentis's research stands out to me, but I would be equally satisfied working with another professor doing related research. Dr. Tesar, Dr. Deshpande, and Dr. Landsberger's research activities all seem like exciting areas of active robotics research.
+
+\end{document}
