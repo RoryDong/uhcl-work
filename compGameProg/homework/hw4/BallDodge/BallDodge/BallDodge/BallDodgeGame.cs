@@ -37,6 +37,9 @@ namespace BallDodge
         //Ball body (in Box2D)
         Body ballBody;
 
+        // The font used to display UI elements
+        SpriteFont font;
+
 
         public BallDodgeGame()
         {
@@ -90,6 +93,9 @@ namespace BallDodge
             + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
             player.Initialize(playerAnimation, playerPosition);
 
+            // Load the score font
+            font = Content.Load<SpriteFont>("fonts/ScoreFont");
+
         }
 
         private void AddBallBody(Vector2 position, Texture2D ballSprite)
@@ -104,14 +110,15 @@ namespace BallDodge
             circle._radius = 26;
             var fd = new FixtureDef();
             fd.shape = circle;
-            fd.restitution = 0.8f;
-            fd.friction = 0.1f;
+            fd.restitution = 1.0f;
+            fd.friction = 0.0f;
             fd.density = 1.0f;
             ballBody = physicsWorld.CreateBody(bd);
             ballBody.CreateFixture(fd);
 
             //Attach ball sprite reference to ball body
             ballBody.SetUserData(ballSprite);
+            ballBody.SetLinearVelocity(new Vector2(50000000.0f, 100000000.0f));
         }
 
         private void AddGround()
@@ -125,9 +132,20 @@ namespace BallDodge
             Body ground = physicsWorld.CreateBody(bd);
 
             //Add line fixture to ground body
-            PolygonShape shape = new PolygonShape();
-            shape.SetAsEdge(new Vector2(0.0f, windowHeight), new Vector2(windowWidth, windowHeight));
-            ground.CreateFixture(shape, 0.0f);
+            PolygonShape bottomBounds = new PolygonShape();
+            bottomBounds.SetAsEdge(new Vector2(0.0f, windowHeight-25), new Vector2(windowWidth, windowHeight-25));
+            PolygonShape topBounds = new PolygonShape();
+            topBounds.SetAsEdge(new Vector2(0.0f, 0.0f), new Vector2(windowWidth, 0.0f));
+            PolygonShape leftBounds = new PolygonShape();
+            leftBounds.SetAsEdge(new Vector2(25.0f, 0.0f), new Vector2(25.0f, windowHeight));
+            PolygonShape rightBounds = new PolygonShape();
+            rightBounds.SetAsEdge(new Vector2(windowWidth-25, 0.0f), new Vector2(windowWidth-25, windowHeight));
+
+            ground.CreateFixture(bottomBounds, 10.0f);
+            ground.CreateFixture(topBounds, 10.0f);
+            ground.CreateFixture(leftBounds, 10.0f);
+            ground.CreateFixture(rightBounds, 10.0f);
+
         }
 
 
@@ -161,17 +179,17 @@ namespace BallDodge
             //Update the player
             UpdatePlayer(gameTime);
 
-            if ((previousKeyboardState.IsKeyDown(Keys.Enter)) && (currentKeyboardState.IsKeyUp(Keys.Enter)))
-            {
-                //Apply linear velocity on ball body
-                Vector2 velocity = new Vector2(0.0f, -100.0f);
-                ballBody.SetLinearVelocity(velocity);
-            }
+            UpdateBallVelocity(gameTime);
+
+            UpdateCollisions();
+
+
             //Update the bodies in physics world
             physicsWorld.Step((float)gameTime.ElapsedGameTime.TotalSeconds, 10, 3);
 
             base.Update(gameTime);
         }
+
 
         private void UpdatePlayer(GameTime gameTime)
         {
@@ -206,6 +224,29 @@ namespace BallDodge
         }
 
 
+
+        private void UpdateBallVelocity(GameTime gameTime)
+        {
+            Vector2 currentLinearVelocity = ballBody.GetLinearVelocity();
+            ballBody.SetLinearVelocity(currentLinearVelocity*2.0f);
+        }
+
+
+        private void UpdateCollisions()
+        {
+            Rectangle playerRect = new Rectangle((int)player.Position.X, (int)player.Position.Y,
+                                        player.Width/2, player.Height);
+
+            Rectangle ballRect = new Rectangle((int)ballBody.Position.X, (int)ballBody.Position.Y,
+                                        20, 52);
+            if (playerRect.Intersects(ballRect))
+            {
+                Exit();
+            }
+
+        }
+
+
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -231,6 +272,9 @@ namespace BallDodge
                     spriteBatch.Draw(ball, b.Position, Color.White);
                 }
             }
+
+            // Draw the score
+            spriteBatch.DrawString(font, "Time: " + gameTime.TotalGameTime.Minutes + ":" + gameTime.TotalGameTime.Seconds % 60, new Vector2(10, 10), Color.White);
 
             spriteBatch.End();
 

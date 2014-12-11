@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage[
+  letterpaper,
+  margin=1in,
+  headsep=4pt, % separation between header rule and text
+]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{%
+  \footnotesize\sffamily
+  \yourname\quad
+  \textcolor{blue}{\youremail}}
+
+\newcommand{\soptitle}{Statement of Purpose}
+\newcommand{\yourname}{Michael Moore}
+\newcommand{\youremail}{michael.moore@nasa.gov}
+
+\newcommand{\statement}[1]{\par\medskip
+  \underline{\textcolor{blue}{\textbf{#1:}}}\space
+}
+
+\usepackage[
+  colorlinks,
+  breaklinks,
+  pdftitle={\yourname - \soptitle},
+  pdfauthor={\yourname},
+  unicode
+]{hyperref}
+
+\begin{document}
+
+\begin{center}\LARGE\soptitle\\
+\large of \yourname\ (CSE MS applicant for Fall---2015)
+\end{center}
+
+\hrule
+\vspace{1pt}
+\hrule height 1pt
+
+\bigskip
+
+It is my hope that a master's degree within UCSD's CSE department will push me
+to the cutting edge of robotics, machine learning, and control
+systems. I must admit that I didn't start out with this goal. I received my B.S. in Aerospace Engineering at U.T. Austin in 2010. I then spent the past four years working as 
+an engineer at NASA Johnson Space Center within the Robotics, Software, and Simulation branch. I love my job
+and it represents the fulfillment of a lifelong dream. However, as I have advanced in
+my career, I have come to realize that this dream job comes with a serious set of responsibilities.
+A more formal education in machine learning and embedded systems is invaluable towards my goal of making original contributions to the design of future robotic systems. I know that a master's degree from UCSD that specializes in these fields will empower me with all of the necessary skills to make these contributions.
+
+Unlike many other undergraduate Aerospace Engineers, I often actively sought out projects that involved
+large amounts of mathematical modeling and simulation. At first, I used my developing skills in this area to support my extra-curricular robotics hobbies. Pretty soon, however, I was able to find a way to get paid for these same skills. In my third year, I was able to get a job with my Systems Engineering professor doing undergraduate research at U.T.'s Center for Space Research (CSR). In this role, I was able to apply my knowledge of Unix, C, and Python programming to help post process scientific instrument data being downlinked
+from the pair of GRACE satellites which U.T. helps NASA to operate. In parallel with this effort,
+I was also spending late nights writing software to develop a model to help in my group's senior design project.
+I was able to build a math model and then simulate some of the thermodynamics involved in a hypothetical
+robotic space mission entering the atmosphere of Venus. At the end of our project, I presented my model to a
+large group of people in industry. My software model was of particular interest to NASA's Jet Propulsion
+Laboratory who was actively conducting design trade studies as a part of considering a future robotic 
+mission to Venus. Based on my presentation, they flew me out to Pasadena for a job interview. In the end,
+I took a job in Houston at L3 Communications to do modeling and simulation work for JSC. 
+
+I started out at JSC helping to build a simulator for NASA's Orion vehicle. My mentor and I built a nodal network solver that became the underlying solver architecture for the Orion simulation's electrical, thermal, and life support systems.
+The solver relies on nodal analysis techniques to simulate these systems in real-time.
+After successfully demonstrating early working versions of the solver, I was moved
+to a small simulation team within JSC's Advanced Exploration Systems.
+This project uses our software to aid in the design of future
+NASA vehicles. Specifically, proposed vehicles for deep space and Mars missions. 
+Our team builds software models of the current state of the vehicle design. NASA uses our
+models to conduct trade studies to evaluate the design in the context of a given mission architecture.
+In particular, I am the modeling and simulation lead for the thermal, electrical, and life support
+subsystems. My work, along with the rest of our teams work, has been demonstrated and well received 
+at the highest levels of NASA, including Dr. Jim Green, NASA's Planetary Science Division Director, and 
+the NASA administrator himself, Charlie Bolden.
+
+UCSD's CSE department has several professors conducting research in areas of great interest to me. In particular, I am drawn to the research of Dr. Thomas Bewley and Dr. Ryan Kastner. Dr. Bewley has put forward great robotics examples of the discipline of model based control. It is a discipline that I have actively attempted to teach myself over the past few years. As an example, I have worked with another colleague outside of NASA on our own UAV hobby project. We recently completed a successful flight test of our custom built quad copter. Over the course of about a year and a half, we developed our own flight control system that runs on a TI CMS320 F2808 microcontroller. The design of the control system was enabled by a dynamic, real-time, 3D model and simulation that I created for the project. This was all done for fun, and the results were very satisfying to me. There is a lot of detail I could elaborate on with this system, but I must keep this short. However, consider that over 90\% of the software for the robot is our own. This includes the motor drivers, wireless communication, sensors, and control system aspects. I have included links to two videos with my resume for proof that this system we built actually flies. Dr. Kastner's research in robotics, wireless sensor networks, sensor fusion, and FPGA applications to these areas is also of great interest to me. I believe 
+there is some really nice overlap between some of my professional skills and hobbies in these areas as well. To conclude, I am most eager for the opportunity to demonstrate that I can indeed become a successful master's student at UCSD.
+
+\end{document}
